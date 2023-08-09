@@ -1,0 +1,223 @@
+#include<iostream>
+using namespace std;
+
+void swap(int *a , int i, int j){
+    int temp = a[i];
+    a[i]=a[j];
+    a[j]=temp;
+}
+int insert(int *a , int i){
+    a[i+1]=a[i];
+    i--;
+    return i;
+}
+
+
+void bubble_sort(int* a, int n){
+    for (int i = 0; i < n; i++){
+        for (int j = 0; j < n; j++){
+            if(a[j]>a[j+1])
+        swap(a,j,j+1);
+        }
+    }
+    cout<<"sorted array : ";
+    for(int i = 0 ; i<n; i++){
+        printf("%d " , *(a + i));
+    }
+    cout<<"\n";
+}
+
+void instertion_sort(int *a,int n){
+    for (int i = 0; i < n; i++)
+    {
+        int key=a[i];
+        int j=i-1;
+        while (j>-1 && a[j]>=key){
+            j=insert(a,j);
+        }
+        a[j+1]=key;
+    }
+    cout<<"sorted array : ";
+    for(int i = 0 ; i<n; i++){
+        printf("%d " , *(a + i));
+    }
+    cout<<"\n";
+}
+
+void selection_sort(int *a,int n){
+    for (int i = 0; i < n; i++)
+    {
+        int min_index=i;
+        for (int j=i ; j<n ; j++){
+            if (a[j]<=a[min_index])
+        min_index=j;
+        }
+        swap(a,i,min_index);
+    }
+    cout<<"sorted array : ";
+    for(int i = 0 ; i<n; i++){
+        printf("%d " , *(a + i));
+    }
+    cout<<"\n";
+}
+
+void binary_search(int *a,int r,int n, int search){
+    int q=(r+n)/2;
+    if(a[q]<search)
+        binary_search(a,q+1,n,search);
+    else if(a[q]>search)
+        binary_search(a,r,q,search);
+    if(a[q]==search )
+        cout<<"the location of "<<search<<" is at : "<<q+1;
+    
+}
+
+void merge(int *a,int l,int m,int n, int r){
+    int size1=m-l+1,size2=n-m,size3=r-n+1;
+    int left[size1],middle[size2],right[size3];
+    int i,j,k,o;
+    for(i = 0 ; i<size1; i++){
+        left[i]=a[l+i];}
+    for(i = 0 ; i<size2; i++){
+        middle[i]=a[m+1+i];}
+    for(i = 0 ; i<size3; i++){
+        right[i]=a[n+1+i];}
+    i=j=k=0;
+    o=l;
+    while (i < size1 && j < size2 && k<size3){
+        if (left[i] <= middle[j] && left[i] <= right[k]){
+            a[o]=left[i];
+            i++;
+        }
+        else if (middle[j]<=left[i] && middle[j]<=right[k]){
+            a[o]=middle[j];
+            j++;
+        }
+        else if (right[k] <= middle[j] && right[k]<= left[i]){
+            a[o]=right[k];
+            k++;
+        }
+        o++;
+    }
+    while (i < size1 && j < size2){
+        if (left[i] <= middle[j]){
+            a[o]=left[i];
+            i++;
+        }
+        else{
+            a[o]=middle[j];
+            j++;
+        }
+        o++;
+    }
+    while (j < size1 && k < size3){
+        if (middle[j] <= right[k]){
+            a[o]=middle[j];
+            j++;
+        }
+        else{
+            a[o]=right[k];
+            k++;
+        }
+        o++;
+    }
+    while (i < size1 && j < size2){
+        if (left[i] <= right[j]){
+            a[o]=left[i];
+            i++;
+        }
+        else{
+            a[o]=right[j];
+            j++;
+        }
+        o++;
+    }
+    while (i < size1) {
+        a[o] = left[i];
+        i++;
+        o++;
+    }
+    while (j < size2) {
+        a[o] = middle[j];
+        j++;
+        o++;
+    }
+    while (k < size3) {
+        a[o] = right[k];
+        k++;
+        o++;
+    }
+}
+
+void merge_sort(int *a,int l,int r){
+    int m= (l + r-1)/3;
+    int n= ((l + r-1)/3)+m;
+    if(l<m  && m<n && n<r){
+        merge_sort(a, l, m);
+        merge_sort(a, m+1, n);
+        merge_sort(a, n+1, r);
+        merge(a, l, m, n, r);
+    }
+}
+
+// void quick_sort(int *a, int n){
+// }
+void leniar_search(int *a,int r,int n, int search){
+    for (int i = 0; i < n; i++)
+    {
+        if(a[i]==search){
+        cout<<"the location of "<<search<<" is at : "<<i+1<<endl;
+        }
+    }
+    
+}
+
+void quick_sort(int* a, int l, int r){
+    int key=a[r];
+    cout<<key<<endl;
+    int n,m;
+    m=0;n=0;
+    while (m<r-2)
+    {
+        if (a[n]<=key){
+            n++;
+            m++;
+        }
+        else{
+            m++;
+            swap(a,n,m);
+            cout<<n<<"-->"<<m<<endl;
+            n++;
+        }
+    }
+    swap(a,n,r-1);
+    // quick_sort(a,l,m-1);
+    // quick_sort(a,m+1,r);
+}
+
+int main(int argc, char const *argv[])
+{
+    int arr[]={1,3,21,6,7,7,5,4,8,9,10,55,7};
+    int n=sizeof(arr)/sizeof(int);
+    cout<<"input array : ";
+    for(int i = 0 ; i<n; i++){
+        printf("%d " , *(arr + i));
+    }
+    cout<<"\n";
+    cout<<n;
+    cout<<"\n";
+    // bubble_sort(arr,n);
+    // instertion_sort(arr,n);
+    // selection_sort(arr,n);
+    merge_sort(arr,0,n-1);
+    // quick_sort(arr,0,n);
+    cout<<"sorted array : ";
+    for(int i = 0 ; i<n; i++){
+        printf("%d " , *(arr + i));
+    }
+    // cout<<"\n\n";
+    // binary_search(arr,0,n,7);
+    // cout<<"\n\n\n";
+    // leniar_search(arr,0,n,7);
+    return 0;
+}
