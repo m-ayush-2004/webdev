@@ -1,0 +1,870 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet integrity="
+        sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital@0;1&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,500;1,300;1,400&display=swap"
+        rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        body {
+            color: white;
+            font-size: 100.5;
+            line-height: auto;
+            background-color: rgb(28, 27, 27);
+        }
+        pre{
+            overflow: visible;
+        }
+        ::-webkit-scrollbar {
+            width: 7px !important;
+            height: 7px !important;
+        }
+
+        /* Track */
+        ::-webkit-scrollbar-track {
+            background: rgb(72, 71, 71);
+            border-radius: 14px;
+        }
+
+        /* Handle */
+        ::-webkit-scrollbar-thumb {
+            background: #555;
+            border-radius: 14px;
+        }
+
+        /* Handle on hover */
+        ::-webkit-scrollbar-thumb:hover {
+            background: #979797;
+        }
+
+        .central {
+            display: flex;
+            justify-content: center;
+            justify-self: center;
+            align-self: center;
+            align-items: center;
+        }
+
+
+        .container3 {
+            margin-left: 10%;
+            width: 80vw;
+            height: 520px;
+            background-color: #2c2d30;
+            justify-self: baseline;
+            align-self: center;
+            align-items: center;
+            border-radius: 20px;
+        }
+
+        .container1 {
+            margin-right: 20px;
+            width: auto;
+            padding: 20px;
+            overflow-y: scroll;
+            overflow-x: scroll;
+            height: 500px;
+            background-color: #2c2d30;
+            justify-self: center;
+            align-self: center;
+            align-items: center;
+            border-radius: 20px;
+        }
+
+        .container2 {
+            margin-left: 10%;
+            width: 80vw;
+            height: auto;
+            padding: 20px;
+            background-color: #344f4a;
+            justify-self: center;
+            align-self: center;
+            align-items: center;
+            border-radius: 20px;
+
+        }
+
+        .container2_item {
+            padding-left: 40px;
+
+        }
+
+        :root {
+            --bs-body-line-height: 30.25px;
+        }
+
+        .colr2 {
+            color: rgb(232, 74, 151);
+        }
+
+        .colr3 {
+            color: rgb(4, 193, 226);
+        }
+
+        .colr4 {
+            color: rgb(88, 157, 45);
+        }
+
+        .colr5 {
+            color: rgb(211, 183, 0);
+        }
+
+        .colr6 {
+            color: rgb(197, 131, 32);
+        }
+
+        .colr7 {
+            color: rgb(223, 199, 91);
+        }
+
+        .colr8 {
+            color: rgb(238, 220, 142);
+        }
+
+        pre {
+            margin: 0px;
+            font-size: 15.5;
+        }
+
+        span {
+            margin: 0px;
+        }
+    </style>
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="container2">
+
+        <h1 class="container2_item">
+            <pre>QUESTION</pre>
+        </h1>
+        <br>
+        <p class="container2_item">Q.1 write all the known sorting algorithms that you know in the function form and
+            show the result?</p>
+
+    </div>
+    <br>
+    <div class="container3">
+        <div class="container1">
+            <pre>
+        <span><span class="colr3">#</span><span class="colr3">include</span>  < iostream > 
+        </span><span><span class="colr2">using</span> <span class="colr3">namespace</span> std<span class="colr3">;</span>
+        </span><span>
+        </span><span>class fibo<span class="colr5">{</span>
+        </span><span>    private:
+        </span><span>        friend <span class="colr3">void</span> calcfib <span class="colr2">(</span> fibo <span class="colr2">)</span> <span class="colr3">;</span>
+        </span><span>    public:
+        </span><span>        <span class="colr3">int</span> n<span class="colr3">;</span>
+        </span><span>        <span class="colr3">void</span> getval <span class="colr2">(</span>  <span class="colr2">)</span> <span class="colr5">{</span>
+        </span><span>            <span class="colr3">cin</span><span class="colr5">>></span>n<span class="colr3">;</span>
+        </span><span>        <span class="colr5">}</span>
+        </span><span>        
+        </span><span><span class="colr5">}</span><span class="colr3">;</span>
+        </span><span><span class="colr3">void</span> calcfib <span class="colr2">(</span> fibo m <span class="colr2">)</span> <span class="colr5">{</span>
+        </span><span>    <span class="colr3">int</span> f<span class="colr5">[</span>m.n<span class="colr5">]</span><span class="colr2">,</span>i<span class="colr3">;</span>
+        </span><span>    f<span class="colr5">[</span>0<span class="colr5">]</span>=0<span class="colr3">;</span>
+        </span><span>    f<span class="colr5">[</span>1<span class="colr5">]</span>=1<span class="colr3">;</span>
+        </span><span>    <span class="colr2">for</span>  <span class="colr2">(</span> i=2<span class="colr3">;</span> i < m.n<span class="colr3">;</span> i<span class="colr2">+</span><span class="colr2">+</span> <span class="colr2">)</span> <span class="colr5">{</span>
+        </span><span>        f<span class="colr5">[</span>i<span class="colr5">]</span>= f<span class="colr5">[</span>i<span class="colr2">-</span>1<span class="colr5">]</span> <span class="colr2">+</span> f<span class="colr5">[</span>i<span class="colr2">-</span>2<span class="colr5">]</span><span class="colr3">;</span>
+        </span><span>    <span class="colr5">}</span>
+        </span><span>    <span class="colr2">for</span>  <span class="colr2">(</span> i=0<span class="colr3">;</span> i < m.n<span class="colr3">;</span> i<span class="colr2">+</span><span class="colr2">+</span> <span class="colr2">)</span> <span class="colr5">{</span>
+        </span><span>        <span class="colr3">cout</span><span class="colr5"><<</span> f<span class="colr5">[</span>i<span class="colr5">]</span><span class="colr5"><<</span> <span class="colr6" > " " </span> <span class="colr3">;</span>
+        </span><span>    <span class="colr5">}</span>
+        </span><span><span class="colr5">}</span>
+        </span><span>
+        </span><span><span class="colr3">int</span> main <span class="colr2">(</span>  <span class="colr2">)</span> <span class="colr5">{</span>
+        </span><span>    fibo fi<span class="colr3">;</span>
+        </span><span>    fi.getval <span class="colr2">(</span>  <span class="colr2">)</span> <span class="colr3">;</span>
+        </span><span>    calcfib <span class="colr2">(</span> fi <span class="colr2">)</span> <span class="colr3">;</span>
+        </span><span><span class="colr5">}</span></span>
+            </pre>
+        </div>
+    </div>
+    <br><br>
+
+    <div class="container2">
+
+        <h1 class="container2_item">
+            <pre>QUESTION</pre>
+        </h1>
+        <br>
+        <p class="container2_item">Q.1 write all the known sorting algorithms that you know in the function form and
+            show the result?</p>
+
+    </div>
+    <br>
+    <div class="container3">
+        <div class="container1">
+            <pre>
+        <span><span class="colr3">#</span><span class="colr3">include</span> < iostream > 
+        </span><span><span class="colr2">using</span> <span class="colr3">namespace</span> std<span class="colr3">;</span>
+        </span><span>
+        </span><span><span class="colr3">void</span> swap <span class="colr2">(</span> <span class="colr3">int</span> <span class="colr2">*</span>a <span class="colr2">,</span> <span class="colr3">int</span> i<span class="colr2">,</span> <span class="colr3">int</span> j <span class="colr2">)</span> <span class="colr5">{</span>
+        </span><span>    <span class="colr3">int</span> temp = a<span class="colr5">[</span>i<span class="colr5">]</span><span class="colr3">;</span>
+        </span><span>    a<span class="colr5">[</span>i<span class="colr5">]</span>=a<span class="colr5">[</span>j<span class="colr5">]</span><span class="colr3">;</span>
+        </span><span>    a<span class="colr5">[</span>j<span class="colr5">]</span>=temp<span class="colr3">;</span>
+        </span><span><span class="colr5">}</span>
+        </span><span><span class="colr3">int</span> insert <span class="colr2">(</span> <span class="colr3">int</span> <span class="colr2">*</span>a <span class="colr2">,</span> <span class="colr3">int</span> i <span class="colr2">)</span> <span class="colr5">{</span>
+        </span><span>    a<span class="colr5">[</span>i<span class="colr2">+</span>1<span class="colr5">]</span>=a<span class="colr5">[</span>i<span class="colr5">]</span><span class="colr3">;</span>
+        </span><span>    i<span class="colr2">-</span><span class="colr2">-</span><span class="colr3">;</span>
+        </span><span>    <span class="colr2">return</span> i<span class="colr3">;</span>
+        </span><span><span class="colr5">}</span>
+        </span><span>
+        </span><span>
+        </span><span><span class="colr3">void</span> bubble_sort <span class="colr2">(</span> <span class="colr3">int</span><span class="colr2">*</span> a<span class="colr2">,</span> <span class="colr3">int</span> n <span class="colr2">)</span> <span class="colr5">{</span>
+        </span><span>    <span class="colr2">for</span>  <span class="colr2">(</span> <span class="colr3">int</span> i = 0<span class="colr3">;</span> i  <  n<span class="colr3">;</span> i<span class="colr2">+</span><span class="colr2">+</span> <span class="colr2">)</span> <span class="colr5">{</span>
+        </span><span>        <span class="colr2">for</span>  <span class="colr2">(</span> <span class="colr3">int</span> j = 0<span class="colr3">;</span> j  <  n<span class="colr3">;</span> j<span class="colr2">+</span><span class="colr2">+</span> <span class="colr2">)</span> <span class="colr5">{</span>
+        </span><span>            <span class="colr2">if</span> <span class="colr2">(</span> a<span class="colr5">[</span>j<span class="colr5">]</span> > a<span class="colr5">[</span>j<span class="colr2">+</span>1<span class="colr5">]</span> <span class="colr2">)</span> 
+        </span><span>        swap <span class="colr2">(</span> a<span class="colr2">,</span>j<span class="colr2">,</span>j<span class="colr2">+</span>1 <span class="colr2">)</span> <span class="colr3">;</span>
+        </span><span>        <span class="colr5">}</span>
+        </span><span>    <span class="colr5">}</span>
+        </span><span>    <span class="colr3">cout</span><span class="colr5"><<</span> <span class="colr6" > "sorted array : " </span> <span class="colr3">;</span>
+        </span><span>    <span class="colr2">for</span> <span class="colr2">(</span> <span class="colr3">int</span> i = 0 <span class="colr3">;</span> i < n<span class="colr3">;</span> i<span class="colr2">+</span><span class="colr2">+</span> <span class="colr2">)</span> <span class="colr5">{</span>
+        </span><span>        <span class='colr2'>printf</span></span> <span class="colr2">(</span>  <span class="colr6" > "<span class="colr7">%d</span> " </span>  <span class="colr2">,</span> <span class="colr2">*</span> <span class="colr2">(</span> a <span class="colr2">+</span> i <span class="colr2">)</span>  <span class="colr2">)</span> <span class="colr3">;</span>
+        </span><span>    <span class="colr5">}</span>
+        </span><span>    <span class="colr3">cout</span><span class="colr5"><<</span> <span class="colr6" > "<span class="colr7">\n</span>" </span> <span class="colr3">;</span>
+        </span><span><span class="colr5">}</span>
+        </span><span>
+        </span><span><span class="colr3">void</span> instertion_sort <span class="colr2">(</span> <span class="colr3">int</span> <span class="colr2">*</span>a<span class="colr2">,</span><span class="colr3">int</span> n <span class="colr2">)</span> <span class="colr5">{</span>
+        </span><span>    <span class="colr2">for</span>  <span class="colr2">(</span> <span class="colr3">int</span> i = 0<span class="colr3">;</span> i  <  n<span class="colr3">;</span> i<span class="colr2">+</span><span class="colr2">+</span> <span class="colr2">)</span> 
+        </span><span>    <span class="colr5">{</span>
+        </span><span>        <span class="colr3">int</span> key=a<span class="colr5">[</span>i<span class="colr5">]</span><span class="colr3">;</span>
+        </span><span>        <span class="colr3">int</span> j=i<span class="colr2">-</span>1<span class="colr3">;</span>
+        </span><span>        <span class="colr2">while</span>  <span class="colr2">(</span> j > <span class="colr2">-</span>1 <span class="colr2">&</span><span class="colr2">&</span> a<span class="colr5">[</span>j<span class="colr5">]</span> <span class="colr2" > = >  </span> key <span class="colr2">)</span> <span class="colr5">{</span>
+        </span><span>            j=insert <span class="colr2">(</span> a<span class="colr2">,</span>j <span class="colr2">)</span> <span class="colr3">;</span>
+        </span><span>        <span class="colr5">}</span>
+        </span><span>        a<span class="colr5">[</span>j<span class="colr2">+</span>1<span class="colr5">]</span>=key<span class="colr3">;</span>
+        </span><span>    <span class="colr5">}</span>
+        </span><span>    <span class="colr3">cout</span><span class="colr5"><<</span> <span class="colr6" > "sorted array : " </span> <span class="colr3">;</span>
+        </span><span>    <span class="colr2">for</span> <span class="colr2">(</span> <span class="colr3">int</span> i = 0 <span class="colr3">;</span> i < n<span class="colr3">;</span> i<span class="colr2">+</span><span class="colr2">+</span> <span class="colr2">)</span> <span class="colr5">{</span>
+        </span><span>        <span class='colr2'>printf</span></span> <span class="colr2">(</span>  <span class="colr6" > "<span class="colr7">%d</span> " </span>  <span class="colr2">,</span> <span class="colr2">*</span> <span class="colr2">(</span> a <span class="colr2">+</span> i <span class="colr2">)</span>  <span class="colr2">)</span> <span class="colr3">;</span>
+        </span><span>    <span class="colr5">}</span>
+        </span><span>    <span class="colr3">cout</span><span class="colr5"><<</span> <span class="colr6" > "<span class="colr7">\n</span>" </span> <span class="colr3">;</span>
+        </span><span><span class="colr5">}</span>
+        </span><span>
+        </span><span><span class="colr3">void</span> selection_sort <span class="colr2">(</span> <span class="colr3">int</span> <span class="colr2">*</span>a<span class="colr2">,</span><span class="colr3">int</span> n <span class="colr2">)</span> <span class="colr5">{</span>
+        </span><span>    <span class="colr2">for</span>  <span class="colr2">(</span> <span class="colr3">int</span> i = 0<span class="colr3">;</span> i  <  n<span class="colr3">;</span> i<span class="colr2">+</span><span class="colr2">+</span> <span class="colr2">)</span> 
+        </span><span>    <span class="colr5">{</span>
+        </span><span>        <span class="colr3">int</span> min_index=i<span class="colr3">;</span>
+        </span><span>        <span class="colr2">for</span>  <span class="colr2">(</span> <span class="colr3">int</span> j=i <span class="colr3">;</span> j < n <span class="colr3">;</span> j<span class="colr2">+</span><span class="colr2">+</span> <span class="colr2">)</span> <span class="colr5">{</span>
+        </span><span>            <span class="colr2">if</span>  <span class="colr2">(</span> a<span class="colr5">[</span>j<span class="colr5">]</span> <span class="colr2" >  < = </span> a<span class="colr5">[</span>min_index<span class="colr5">]</span> <span class="colr2">)</span> 
+        </span><span>        min_index=j<span class="colr3">;</span>
+        </span><span>        <span class="colr5">}</span>
+        </span><span>        swap <span class="colr2">(</span> a<span class="colr2">,</span>i<span class="colr2">,</span>min_index <span class="colr2">)</span> <span class="colr3">;</span>
+        </span><span>    <span class="colr5">}</span>
+        </span><span>    <span class="colr3">cout</span><span class="colr5"><<</span> <span class="colr6" > "sorted array : " </span> <span class="colr3">;</span>
+        </span><span>    <span class="colr2">for</span> <span class="colr2">(</span> <span class="colr3">int</span> i = 0 <span class="colr3">;</span> i < n<span class="colr3">;</span> i<span class="colr2">+</span><span class="colr2">+</span> <span class="colr2">)</span> <span class="colr5">{</span>
+        </span><span>        <span class='colr2'>printf</span></span> <span class="colr2">(</span>  <span class="colr6" > "<span class="colr7">%d</span> " </span>  <span class="colr2">,</span> <span class="colr2">*</span> <span class="colr2">(</span> a <span class="colr2">+</span> i <span class="colr2">)</span>  <span class="colr2">)</span> <span class="colr3">;</span>
+        </span><span>    <span class="colr5">}</span>
+        </span><span>    <span class="colr3">cout</span><span class="colr5"><<</span> <span class="colr6" > "<span class="colr7">\n</span>" </span> <span class="colr3">;</span>
+        </span><span><span class="colr5">}</span>
+        </span><span>
+        </span><span><span class="colr3">void</span> binary_search <span class="colr2">(</span> <span class="colr3">int</span> <span class="colr2">*</span>a<span class="colr2">,</span><span class="colr3">int</span> r<span class="colr2">,</span><span class="colr3">int</span> n<span class="colr2">,</span> <span class="colr3">int</span> search <span class="colr2">)</span> <span class="colr5">{</span>
+        </span><span>    <span class="colr3">int</span> q= <span class="colr2">(</span> r<span class="colr2">+</span>n <span class="colr2">)</span> /2<span class="colr3">;</span>
+        </span><span>    <span class="colr2">if</span> <span class="colr2">(</span> a<span class="colr5">[</span>q<span class="colr5">]</span> < search <span class="colr2">)</span> 
+        </span><span>        binary_search <span class="colr2">(</span> a<span class="colr2">,</span>q<span class="colr2">+</span>1<span class="colr2">,</span>n<span class="colr2">,</span>search <span class="colr2">)</span> <span class="colr3">;</span>
+        </span><span>    <span class="colr2"><span class="colr2">else</span> <span class="colr2">if</span></span> <span class="colr2">(</span> a<span class="colr5">[</span>q<span class="colr5">]</span> > search <span class="colr2">)</span> 
+        </span><span>        binary_search <span class="colr2">(</span> a<span class="colr2">,</span>r<span class="colr2">,</span>q<span class="colr2">,</span>search <span class="colr2">)</span> <span class="colr3">;</span>
+        </span><span>    <span class="colr2">if</span> <span class="colr2">(</span> a<span class="colr5">[</span>q<span class="colr5">]</span> <span class="colr2" > == </span> search  <span class="colr2">)</span> 
+        </span><span>        <span class="colr3">cout</span><span class="colr5"><<</span> <span class="colr6" > "the location of " </span> <span class="colr5"><<</span>search<span class="colr5"><<</span> <span class="colr6" > " is at : " </span> <span class="colr5"><<</span>q<span class="colr2">+</span>1<span class="colr3">;</span>
+        </span><span>    
+        </span><span><span class="colr5">}</span>
+        </span><span>
+        </span><span><span class="colr3">void</span> merge <span class="colr2">(</span> <span class="colr3">int</span> <span class="colr2">*</span>a<span class="colr2">,</span><span class="colr3">int</span> l<span class="colr2">,</span><span class="colr3">int</span> m<span class="colr2">,</span> <span class="colr3">int</span> r <span class="colr2">)</span> <span class="colr5">{</span>
+        </span><span>    <span class="colr3">int</span> size1=m<span class="colr2">-</span>l<span class="colr2">+</span>1<span class="colr2">,</span>size2=r<span class="colr2">-</span>m<span class="colr3">;</span>
+        </span><span>    <span class="colr3">int</span> left<span class="colr5">[</span>size1<span class="colr5">]</span><span class="colr2">,</span>right<span class="colr5">[</span>size2<span class="colr5">]</span><span class="colr3">;</span>
+        </span><span>    <span class="colr3">int</span> i<span class="colr2">,</span>j<span class="colr2">,</span>o<span class="colr3">;</span>
+        </span><span>    <span class="colr2">for</span> <span class="colr2">(</span> i = 0 <span class="colr3">;</span> i < size1<span class="colr3">;</span> i<span class="colr2">+</span><span class="colr2">+</span> <span class="colr2">)</span> <span class="colr5">{</span>
+        </span><span>        left<span class="colr5">[</span>i<span class="colr5">]</span>=a<span class="colr5">[</span>l<span class="colr2">+</span>i<span class="colr5">]</span><span class="colr3">;</span><span class="colr5">}</span>
+        </span><span>    <span class="colr2">for</span> <span class="colr2">(</span> i = 0 <span class="colr3">;</span> i < size2<span class="colr3">;</span> i<span class="colr2">+</span><span class="colr2">+</span> <span class="colr2">)</span> <span class="colr5">{</span>
+        </span><span>        right<span class="colr5">[</span>i<span class="colr5">]</span>=a<span class="colr5">[</span>m<span class="colr2">+</span>1<span class="colr2">+</span>i<span class="colr5">]</span><span class="colr3">;</span><span class="colr5">}</span>
+        </span><span>    i=j=0<span class="colr3">;</span>
+        </span><span>    o=l<span class="colr3">;</span>
+        </span><span>    <span class="colr2">while</span>  <span class="colr2">(</span> i  <  size1 <span class="colr2">&</span><span class="colr2">&</span> j  <  size2 <span class="colr2">)</span> <span class="colr5">{</span>
+        </span><span>        <span class="colr2">if</span>  <span class="colr2">(</span> left<span class="colr5">[</span>i<span class="colr5">]</span>  <span class="colr2" >  < = </span>  right<span class="colr5">[</span>j<span class="colr5">]</span> <span class="colr2">)</span> <span class="colr5">{</span>
+        </span><span>            a<span class="colr5">[</span>o<span class="colr5">]</span>=left<span class="colr5">[</span>i<span class="colr5">]</span><span class="colr3">;</span>
+        </span><span>            i<span class="colr2">+</span><span class="colr2">+</span><span class="colr3">;</span>
+        </span><span>        <span class="colr5">}</span>
+        </span><span>        <span class="colr2">else</span><span class="colr5">{</span>
+        </span><span>            a<span class="colr5">[</span>o<span class="colr5">]</span>=right<span class="colr5">[</span>j<span class="colr5">]</span><span class="colr3">;</span>
+        </span><span>            j<span class="colr2">+</span><span class="colr2">+</span><span class="colr3">;</span>
+        </span><span>        <span class="colr5">}</span>
+        </span><span>        o<span class="colr2">+</span><span class="colr2">+</span><span class="colr3">;</span>
+        </span><span>    <span class="colr5">}</span>
+        </span><span>    <span class="colr2">while</span>  <span class="colr2">(</span> i  <  size1 <span class="colr2">)</span>  <span class="colr5">{</span>
+        </span><span>        a<span class="colr5">[</span>o<span class="colr5">]</span> = left<span class="colr5">[</span>i<span class="colr5">]</span><span class="colr3">;</span>
+        </span><span>        i<span class="colr2">+</span><span class="colr2">+</span><span class="colr3">;</span>
+        </span><span>        o<span class="colr2">+</span><span class="colr2">+</span><span class="colr3">;</span>
+        </span><span>    <span class="colr5">}</span>
+        </span><span>    <span class="colr2">while</span>  <span class="colr2">(</span> j  <  size2 <span class="colr2">)</span>  <span class="colr5">{</span>
+        </span><span>        a<span class="colr5">[</span>o<span class="colr5">]</span> = right<span class="colr5">[</span>j<span class="colr5">]</span><span class="colr3">;</span>
+        </span><span>        j<span class="colr2">+</span><span class="colr2">+</span><span class="colr3">;</span>
+        </span><span>        o<span class="colr2">+</span><span class="colr2">+</span><span class="colr3">;</span>
+        </span><span>    <span class="colr5">}</span>
+        </span><span><span class="colr5">}</span>
+        </span><span>
+        </span><span><span class="colr3">void</span> merge_sort <span class="colr2">(</span> <span class="colr3">int</span> <span class="colr2">*</span>a<span class="colr2">,</span><span class="colr3">int</span> l<span class="colr2">,</span><span class="colr3">int</span> r <span class="colr2">)</span> <span class="colr5">{</span>
+        </span><span>    <span class="colr2">if</span> <span class="colr2">(</span> l  <  r <span class="colr2">)</span> <span class="colr5">{</span>
+        </span><span>    <span class="colr3">int</span> m=  <span class="colr2">(</span> l <span class="colr2">+</span> r <span class="colr2">-</span> 1 <span class="colr2">)</span> /2<span class="colr3">;</span>
+        </span><span>
+        </span><span>        merge_sort <span class="colr2">(</span> a<span class="colr2">,</span> l<span class="colr2">,</span> m <span class="colr2">)</span> <span class="colr3">;</span>
+        </span><span>        merge_sort <span class="colr2">(</span> a<span class="colr2">,</span> m<span class="colr2">+</span>1<span class="colr2">,</span> r <span class="colr2">)</span> <span class="colr3">;</span>
+        </span><span>
+        </span><span>        merge <span class="colr2">(</span> a<span class="colr2">,</span> l<span class="colr2">,</span> m<span class="colr2">,</span> r <span class="colr2">)</span> <span class="colr3">;</span>
+        </span><span>    <span class="colr5">}</span>
+        </span><span><span class="colr5">}</span>
+        </span><span>
+        </span><span class="colr4">// void quick_sort(int *a, int n){
+        </span><span class="colr4">// }
+        </span><span><span class="colr3">void</span> leniar_search <span class="colr2">(</span> <span class="colr3">int</span> <span class="colr2">*</span>a<span class="colr2">,</span><span class="colr3">int</span> r<span class="colr2">,</span><span class="colr3">int</span> n<span class="colr2">,</span> <span class="colr3">int</span> search <span class="colr2">)</span> <span class="colr5">{</span>
+        </span><span>    <span class="colr2">for</span>  <span class="colr2">(</span> <span class="colr3">int</span> i = 0<span class="colr3">;</span> i  <  n<span class="colr3">;</span> i<span class="colr2">+</span><span class="colr2">+</span> <span class="colr2">)</span> 
+        </span><span>    <span class="colr5">{</span>
+        </span><span>        <span class="colr2">if</span> <span class="colr2">(</span> a<span class="colr5">[</span>i<span class="colr5">]</span> <span class="colr2" > == </span> search <span class="colr2">)</span> <span class="colr5">{</span>
+        </span><span>        <span class="colr3">cout</span><span class="colr5"><<</span> <span class="colr6" > "the location of " </span> <span class="colr5"><<</span>search<span class="colr5"><<</span> <span class="colr6" > " is at : " </span> <span class="colr5"><<</span>i<span class="colr2">+</span>1<span class="colr5"><<</span>endl<span class="colr3">;</span>
+        </span><span>        <span class="colr5">}</span>
+        </span><span>    <span class="colr5">}</span>
+        </span><span>    
+        </span><span><span class="colr5">}</span>
+        </span><span>
+        </span><span><span class="colr3">void</span> quick_sort <span class="colr2">(</span> <span class="colr3">int</span><span class="colr2">*</span> a<span class="colr2">,</span> <span class="colr3">int</span> l<span class="colr2">,</span> <span class="colr3">int</span> r <span class="colr2">)</span> <span class="colr5">{</span>
+        </span><span>    <span class="colr3">int</span> key=a<span class="colr5">[</span>r<span class="colr5">]</span><span class="colr3">;</span>
+        </span><span>    <span class="colr3">cout</span><span class="colr5"><<</span>key<span class="colr5"><<</span>endl<span class="colr3">;</span>
+        </span><span>    <span class="colr3">int</span> n<span class="colr2">,</span>m<span class="colr3">;</span>
+        </span><span>    m=0<span class="colr3">;</span>n=0<span class="colr3">;</span>
+        </span><span>    <span class="colr2">while</span>  <span class="colr2">(</span> m < r<span class="colr2">-</span>2 <span class="colr2">)</span> 
+        </span><span>    <span class="colr5">{</span>
+        </span><span>        <span class="colr2">if</span>  <span class="colr2">(</span> a<span class="colr5">[</span>n<span class="colr5">]</span> <span class="colr2" >  < = </span> key <span class="colr2">)</span> <span class="colr5">{</span>
+        </span><span>            n<span class="colr2">+</span><span class="colr2">+</span><span class="colr3">;</span>
+        </span><span>            m<span class="colr2">+</span><span class="colr2">+</span><span class="colr3">;</span>
+        </span><span>        <span class="colr5">}</span>
+        </span><span>        <span class="colr2">else</span><span class="colr5">{</span>
+        </span><span>            m<span class="colr2">+</span><span class="colr2">+</span><span class="colr3">;</span>
+        </span><span>            swap <span class="colr2">(</span> a<span class="colr2">,</span>n<span class="colr2">,</span>m <span class="colr2">)</span> <span class="colr3">;</span>
+        </span><span>            <span class="colr3">cout</span><span class="colr5"><<</span>n<span class="colr5"><<</span> <span class="colr6" > "<span class="colr2">-</span><span class="colr2">-</span> > " </span> <span class="colr5"><<</span>m<span class="colr5"><<</span>endl<span class="colr3">;</span>
+        </span><span>            n<span class="colr2">+</span><span class="colr2">+</span><span class="colr3">;</span>
+        </span><span>        <span class="colr5">}</span>
+        </span><span>    <span class="colr5">}</span>
+        </span><span>    swap <span class="colr2">(</span> a<span class="colr2">,</span>n<span class="colr2">,</span>r<span class="colr2">-</span>1 <span class="colr2">)</span> <span class="colr3">;</span>
+        </span><span class="colr4">    // quick_sort(a,l,m-1);
+        </span><span class="colr4">    // quick_sort(a,m+1,r);
+        </span><span><span class="colr5">}</span>
+        </span><span><span class="colr3">int</span> main <span class="colr2">(</span> <span class="colr3">int</span> argc<span class="colr2">,</span> <span class="colr3">char</span> const <span class="colr2">*</span>argv<span class="colr5">[</span><span class="colr5">]</span> <span class="colr2">)</span> 
+        </span><span><span class="colr5">{</span>
+        </span><span>    <span class="colr3">int</span> arr<span class="colr5">[</span><span class="colr5">]</span>=<span class="colr5">{</span>1<span class="colr2">,</span>3<span class="colr2">,</span>21<span class="colr2">,</span>6<span class="colr2">,</span>7<span class="colr2">,</span>7<span class="colr2">,</span>5<span class="colr2">,</span>4<span class="colr2">,</span>8<span class="colr2">,</span>9<span class="colr2">,</span>10<span class="colr2">,</span>55<span class="colr2">,</span>7<span class="colr5">}</span><span class="colr3">;</span>
+        </span><span>    <span class="colr3">int</span> n=sizeof <span class="colr2">(</span> arr <span class="colr2">)</span> /sizeof <span class="colr2">(</span> <span class="colr3">int</span> <span class="colr2">)</span> <span class="colr3">;</span>
+        </span><span>    <span class="colr3">cout</span><span class="colr5"><<</span> <span class="colr6" > "input array : " </span> <span class="colr3">;</span>
+        </span><span>    <span class="colr2">for</span> <span class="colr2">(</span> <span class="colr3">int</span> i = 0 <span class="colr3">;</span> i < n<span class="colr3">;</span> i<span class="colr2">+</span><span class="colr2">+</span> <span class="colr2">)</span> <span class="colr5">{</span>
+        </span><span>        <span class='colr2'>printf</span></span> <span class="colr2">(</span>  <span class="colr6" > "<span class="colr7">%d</span> " </span>  <span class="colr2">,</span> <span class="colr2">*</span> <span class="colr2">(</span> arr <span class="colr2">+</span> i <span class="colr2">)</span>  <span class="colr2">)</span> <span class="colr3">;</span>
+        </span><span>    <span class="colr5">}</span>
+        </span><span>    <span class="colr3">cout</span><span class="colr5"><<</span> <span class="colr6" > "<span class="colr7">\n</span>" </span> <span class="colr3">;</span>
+        </span><span class="colr4">    // bubble_sort(arr,n);
+        </span><span class="colr4">    // instertion_sort(arr,n);
+        </span><span class="colr4">    // selection_sort(arr,n);
+        </span><span class="colr4">    // merge_sort(arr,0,n-1);
+        </span><span>    quick_sort <span class="colr2">(</span> arr<span class="colr2">,</span>0<span class="colr2">,</span>n <span class="colr2">)</span> <span class="colr3">;</span>
+        </span><span>    <span class="colr3">cout</span><span class="colr5"><<</span> <span class="colr6" > "sorted array : " </span> <span class="colr3">;</span>
+        </span><span>    <span class="colr2">for</span> <span class="colr2">(</span> <span class="colr3">int</span> i = 0 <span class="colr3">;</span> i < n<span class="colr3">;</span> i<span class="colr2">+</span><span class="colr2">+</span> <span class="colr2">)</span> <span class="colr5">{</span>
+        </span><span>        <span class='colr2'>printf</span></span> <span class="colr2">(</span>  <span class="colr6" > "<span class="colr7">%d</span> " </span>  <span class="colr2">,</span> <span class="colr2">*</span> <span class="colr2">(</span> arr <span class="colr2">+</span> i <span class="colr2">)</span>  <span class="colr2">)</span> <span class="colr3">;</span>
+        </span><span>    <span class="colr5">}</span>
+        </span><span class="colr4">    // cout<<"\n\n";
+        </span><span class="colr4">    // binary_search(arr,0,n,7);
+        </span><span class="colr4">    // cout<<"\n\n\n";
+        </span><span class="colr4">    // leniar_search(arr,0,n,7);
+        </span><span>    <span class="colr2">return</span> 0<span class="colr3">;</span>
+        </span><span><span class="colr5">}</span>
+        </span>
+            </pre>
+        </div>
+    </div>
+    <br><br>
+    <div class="container2">
+
+        <h1 class="container2_item">
+            <pre>QUESTION</pre>
+        </h1>
+        <br>
+        <p class="container2_item">Q.1 write a code in c or c++ for implementing linked list functions</p>
+
+    </div>
+    <br>
+    <div class="container3">
+        <div class="container1">
+            <pre>
+        <span><span class="colr3">#</span><span class="colr3">include</span>  < stdio.h > 
+        <span><span class="colr3">#</span><span class="colr3">include</span>  < stdio.h > 
+        </span><span><span class="colr3">#</span><span class="colr3">include</span>  < stdlib.h > 
+        </span><span><span class="colr3">void</span> print <span class="colr2">(</span>  <span class="colr2">)</span> <span class="colr3">;</span>
+        </span><span><span class="colr3">struct</span> Node
+        </span><span><span class="colr5">{</span>
+        </span><span>    <span class="colr3">int</span> data<span class="colr3">;</span>
+        </span><span>    <span class="colr3">struct</span> Node <span class="colr2">*</span>next<span class="colr3">;</span>
+        </span><span><span class="colr5">}</span><span class="colr3">;</span>
+        </span><span><span class="colr3">struct</span> Node <span class="colr2">*</span>head<span class="colr3">;</span>
+        </span><span>
+        </span><span><span class="colr3">int</span> input <span class="colr2">(</span>  <span class="colr2">)</span> 
+        </span><span><span class="colr5">{</span>
+        </span><span>    <span class="colr3">int</span> s<span class="colr3">;</span>
+        </span><span>    <span class='colr2'>printf</span></span> <span class="colr2">(</span>  <span class="colr6" > "enter the linked list element : " </span>  <span class="colr2">)</span> <span class="colr3">;</span>
+        </span><span>    scanf <span class="colr2">(</span>  <span class="colr6" > "<span class="colr7">%d</span>" </span> <span class="colr2">,</span> <span class="colr2">&</span>s <span class="colr2">)</span> <span class="colr3">;</span>
+        </span><span>    <span class="colr2">return</span> s<span class="colr3">;</span>
+        </span><span><span class="colr5">}</span>
+        </span><span>
+        </span><span><span class="colr3">int</span> input2 <span class="colr2">(</span>  <span class="colr2">)</span> 
+        </span><span><span class="colr5">{</span>
+        </span><span>    <span class="colr3">int</span> s<span class="colr3">;</span>
+        </span><span>    <span class='colr2'>printf</span></span> <span class="colr2">(</span>  <span class="colr6" > "enter the linked list key : " </span>  <span class="colr2">)</span> <span class="colr3">;</span>
+        </span><span>    scanf <span class="colr2">(</span>  <span class="colr6" > "<span class="colr7">%d</span>" </span> <span class="colr2">,</span> <span class="colr2">&</span>s <span class="colr2">)</span> <span class="colr3">;</span>
+        </span><span>    <span class="colr2">return</span> s<span class="colr3">;</span>
+        </span><span><span class="colr5">}</span>
+        </span><span>
+        </span><span><span class="colr3">void</span> push_end <span class="colr2">(</span>  <span class="colr2">)</span> 
+        </span><span><span class="colr5">{</span>
+        </span><span>    <span class="colr3">struct</span> Node <span class="colr2">*</span>temp<span class="colr3">;</span>
+        </span><span>    <span class="colr2">if</span>  <span class="colr2">(</span> head  <span class="colr2" > == </span>  NULL <span class="colr2">)</span> 
+        </span><span>    <span class="colr5">{</span>
+        </span><span>        temp =  <span class="colr2">(</span> <span class="colr3">struct</span> Node <span class="colr2">*</span> <span class="colr2">)</span> malloc <span class="colr2">(</span> sizeof <span class="colr2">(</span> <span class="colr3">struct</span> Node <span class="colr2">*</span> <span class="colr2">)</span>  <span class="colr2">)</span> <span class="colr3">;</span>
+        </span><span>        temp <span class="colr2" > <span class="colr2">-</span> >  </span> data = input <span class="colr2">(</span>  <span class="colr2">)</span> <span class="colr3">;</span>
+        </span><span>        temp <span class="colr2" > <span class="colr2">-</span> >  </span> next = NULL<span class="colr3">;</span>
+        </span><span>        head = temp<span class="colr3">;</span>
+        </span><span>    <span class="colr5">}</span>
+        </span><span>    <span class="colr2">else</span>
+        </span><span>    <span class="colr5">{</span>
+        </span><span>        temp = head<span class="colr3">;</span>
+        </span><span>        <span class="colr2">while</span>  <span class="colr2">(</span> temp <span class="colr2" > <span class="colr2">-</span> >  </span> next  <span class="colr2" > <span class="colr2">!</span>= </span>  NULL <span class="colr2">)</span> 
+        </span><span>        <span class="colr5">{</span>
+        </span><span>            temp = temp <span class="colr2" > <span class="colr2">-</span> >  </span> next<span class="colr3">;</span>
+        </span><span>        <span class="colr5">}</span>
+        </span><span>        <span class="colr3">int</span> s<span class="colr3">;</span>
+        </span><span>        <span class='colr2'>printf</span></span> <span class="colr2">(</span>  <span class="colr6" > "enter the linked list element : " </span>  <span class="colr2">)</span> <span class="colr3">;</span>
+        </span><span>        scanf <span class="colr2">(</span>  <span class="colr6" > "<span class="colr7">%d</span>" </span> <span class="colr2">,</span> <span class="colr2">&</span>s <span class="colr2">)</span> <span class="colr3">;</span>
+        </span><span>        temp <span class="colr2" > <span class="colr2">-</span> >  </span> next =  <span class="colr2">(</span> <span class="colr3">struct</span> Node <span class="colr2">*</span> <span class="colr2">)</span> malloc <span class="colr2">(</span> sizeof <span class="colr2">(</span> <span class="colr3">struct</span> Node <span class="colr2">*</span> <span class="colr2">)</span>  <span class="colr2">)</span> <span class="colr3">;</span>
+        </span><span>        <span class='colr2'>printf</span></span> <span class="colr2">(</span> "memory created <span class="colr2">!</span><span class="colr2">!</span><span class="colr7">\n</span>" <span class="colr2">)</span> <span class="colr3">;</span>
+        </span><span>        temp = temp <span class="colr2" > <span class="colr2">-</span> >  </span> next<span class="colr3">;</span>
+        </span><span>        <span class='colr2'>printf</span></span> <span class="colr2">(</span> "moved to next <span class="colr2">!</span><span class="colr2">!</span><span class="colr7">\n</span>" <span class="colr2">)</span> <span class="colr3">;</span>
+        </span><span>        temp <span class="colr2" > <span class="colr2">-</span> >  </span> data = s<span class="colr3">;</span>
+        </span><span>        temp <span class="colr2" > <span class="colr2">-</span> >  </span> next = NULL<span class="colr3">;</span>
+        </span><span>    <span class="colr5">}</span>
+        </span><span>    print <span class="colr2">(</span>  <span class="colr2">)</span> <span class="colr3">;</span>
+        </span><span><span class="colr5">}</span>
+        </span><span>
+        </span><span><span class="colr3">void</span> push_begin <span class="colr2">(</span>  <span class="colr2">)</span> 
+        </span><span><span class="colr5">{</span>
+        </span><span>    <span class="colr3">struct</span> Node <span class="colr2">*</span>temp<span class="colr3">;</span>
+        </span><span>    temp =  <span class="colr2">(</span> <span class="colr3">struct</span> Node <span class="colr2">*</span> <span class="colr2">)</span> malloc <span class="colr2">(</span> sizeof <span class="colr2">(</span> <span class="colr3">struct</span> Node <span class="colr2">*</span> <span class="colr2">)</span>  <span class="colr2">)</span> <span class="colr3">;</span>
+        </span><span>    temp <span class="colr2" > <span class="colr2">-</span> >  </span> data = input <span class="colr2">(</span>  <span class="colr2">)</span> <span class="colr3">;</span>
+        </span><span>    temp <span class="colr2" > <span class="colr2">-</span> >  </span> next = head<span class="colr3">;</span>
+        </span><span>    head = temp<span class="colr3">;</span>
+        </span><span>    print <span class="colr2">(</span>  <span class="colr2">)</span> <span class="colr3">;</span>
+        </span><span><span class="colr5">}</span>
+        </span><span>
+        </span><span><span class="colr3">void</span> insert <span class="colr2">(</span>  <span class="colr2">)</span> 
+        </span><span><span class="colr5">{</span>
+        </span><span>    <span class="colr3">struct</span> Node <span class="colr2">*</span>temp<span class="colr3">;</span>
+        </span><span>    <span class="colr3">struct</span> Node <span class="colr2">*</span>temp1<span class="colr3">;</span>
+        </span><span>    <span class="colr2">if</span>  <span class="colr2">(</span> head  <span class="colr2" > == </span>  NULL <span class="colr2">)</span> 
+        </span><span>    <span class="colr5">{</span>
+        </span><span>        temp =  <span class="colr2">(</span> <span class="colr3">struct</span> Node <span class="colr2">*</span> <span class="colr2">)</span> malloc <span class="colr2">(</span> sizeof <span class="colr2">(</span> <span class="colr3">struct</span> Node <span class="colr2">*</span> <span class="colr2">)</span>  <span class="colr2">)</span> <span class="colr3">;</span>
+        </span><span>        temp <span class="colr2" > <span class="colr2">-</span> >  </span> data = input <span class="colr2">(</span>  <span class="colr2">)</span> <span class="colr3">;</span>
+        </span><span>        temp <span class="colr2" > <span class="colr2">-</span> >  </span> next = NULL<span class="colr3">;</span>
+        </span><span>        head = temp<span class="colr3">;</span>
+        </span><span>    <span class="colr5">}</span>
+        </span><span>
+        </span><span>    <span class="colr2">else</span>
+        </span><span>    <span class="colr5">{</span>
+        </span><span>        <span class="colr3">int</span> key = input2 <span class="colr2">(</span>  <span class="colr2">)</span> <span class="colr3">;</span>
+        </span><span>        temp = head<span class="colr3">;</span>
+        </span><span>        <span class="colr2">while</span>  <span class="colr2">(</span> temp <span class="colr2" > <span class="colr2">-</span> >  </span> data  <span class="colr2" > <span class="colr2">!</span>= </span>  key <span class="colr2">)</span> 
+        </span><span>        <span class="colr5">{</span>
+        </span><span>            temp = temp <span class="colr2" > <span class="colr2">-</span> >  </span> next<span class="colr3">;</span>
+        </span><span>        <span class="colr5">}</span>
+        </span><span>        <span class="colr2">if</span>  <span class="colr2">(</span> temp <span class="colr2" > <span class="colr2">-</span> >  </span> next  <span class="colr2" > == </span>  NULL <span class="colr2">)</span> 
+        </span><span>        <span class="colr5">{</span>
+        </span><span>            push_end <span class="colr2">(</span>  <span class="colr2">)</span> <span class="colr3">;</span>
+        </span><span>        <span class="colr5">}</span>
+        </span><span>        <span class="colr2">else</span>
+        </span><span>        <span class="colr5">{</span>
+        </span><span>            <span class="colr3">int</span> s= input <span class="colr2">(</span>  <span class="colr2">)</span> <span class="colr3">;</span>
+        </span><span>            temp1 =  <span class="colr2">(</span> <span class="colr3">struct</span> Node <span class="colr2">*</span> <span class="colr2">)</span> malloc <span class="colr2">(</span> sizeof <span class="colr2">(</span> <span class="colr3">struct</span> Node <span class="colr2">*</span> <span class="colr2">)</span>  <span class="colr2">)</span> <span class="colr3">;</span>
+        </span><span>            <span class='colr2'>printf</span></span> <span class="colr2">(</span> "memory created <span class="colr2">!</span><span class="colr2">!</span><span class="colr7">\n</span>" <span class="colr2">)</span> <span class="colr3">;</span>
+        </span><span>            temp1 <span class="colr2" > <span class="colr2">-</span> >  </span> next = temp <span class="colr2" > <span class="colr2">-</span> >  </span> next<span class="colr3">;</span>
+        </span><span>            temp <span class="colr2" > <span class="colr2">-</span> >  </span> next = temp1<span class="colr3">;</span>
+        </span><span>            <span class='colr2'>printf</span></span> <span class="colr2">(</span> "moved to next <span class="colr2">!</span><span class="colr2">!</span><span class="colr7">\n</span>" <span class="colr2">)</span> <span class="colr3">;</span>
+        </span><span>            temp1 <span class="colr2" > <span class="colr2">-</span> >  </span> data = s<span class="colr3">;</span>
+        </span><span>            print <span class="colr2">(</span>  <span class="colr2">)</span> <span class="colr3">;</span>
+        </span><span>        <span class="colr5">}</span>
+        </span><span>    <span class="colr5">}</span>
+        </span><span><span class="colr5">}</span>
+        </span><span>
+        </span><span><span class="colr3">void</span> delete_end <span class="colr2">(</span>  <span class="colr2">)</span> 
+        </span><span><span class="colr5">{</span>
+        </span><span>    <span class="colr3">struct</span> Node <span class="colr2">*</span>temp<span class="colr3">;</span>
+        </span><span>    <span class="colr3">struct</span> Node <span class="colr2">*</span>temp1<span class="colr3">;</span>
+        </span><span>    <span class="colr2">if</span>  <span class="colr2">(</span> head  <span class="colr2" > == </span>  NULL <span class="colr2">)</span> 
+        </span><span>    <span class="colr5">{</span>
+        </span><span>        <span class='colr2'>printf</span></span> <span class="colr2">(</span> "<span class="colr7">\n</span>linked list is already empty<span class="colr2">!</span><span class="colr2">!</span><span class="colr7">\n</span><span class="colr7">\n</span>" <span class="colr2">)</span> <span class="colr3">;</span>
+        </span><span>    <span class="colr5">}</span>
+        </span><span>    <span class="colr2">else</span>
+        </span><span>    <span class="colr5">{</span>
+        </span><span>        temp = head<span class="colr3">;</span>
+        </span><span>        <span class="colr2">while</span>  <span class="colr2">(</span> temp <span class="colr2" > <span class="colr2">-</span> >  </span> next  <span class="colr2" > <span class="colr2">!</span>= </span>  NULL <span class="colr2">)</span> 
+        </span><span>        <span class="colr5">{</span>
+        </span><span>            temp1 = temp<span class="colr3">;</span>
+        </span><span>            temp = temp <span class="colr2" > <span class="colr2">-</span> >  </span> next<span class="colr3">;</span>
+        </span><span>        <span class="colr5">}</span>
+        </span><span>        <span class="colr3">int</span> s<span class="colr3">;</span>
+        </span><span>        temp1 <span class="colr2" > <span class="colr2">-</span> >  </span> next = NULL<span class="colr3">;</span>
+        </span><span>        free <span class="colr2">(</span> temp <span class="colr2">)</span> <span class="colr3">;</span>
+        </span><span>        <span class='colr2'>printf</span></span> <span class="colr2">(</span> "last element is successfully delted<span class="colr2">!</span><span class="colr2">!</span><span class="colr7">\n</span>" <span class="colr2">)</span> <span class="colr3">;</span>
+        </span><span>        print <span class="colr2">(</span>  <span class="colr2">)</span> <span class="colr3">;</span>
+        </span><span>    <span class="colr5">}</span>
+        </span><span><span class="colr5">}</span>
+        </span><span>
+        </span><span><span class="colr3">void</span> delete_begin <span class="colr2">(</span>  <span class="colr2">)</span> 
+        </span><span><span class="colr5">{</span>
+        </span><span>    <span class="colr3">struct</span> Node <span class="colr2">*</span>temp<span class="colr3">;</span>
+        </span><span>    temp = head<span class="colr3">;</span>
+        </span><span>    head = temp <span class="colr2" > <span class="colr2">-</span> >  </span> next<span class="colr3">;</span>
+        </span><span>    free <span class="colr2">(</span> temp <span class="colr2">)</span> <span class="colr3">;</span>
+        </span><span>    <span class='colr2'>printf</span></span> <span class="colr2">(</span> "first element is successfully delted<span class="colr2">!</span><span class="colr2">!</span><span class="colr7">\n</span>" <span class="colr2">)</span> <span class="colr3">;</span>
+        </span><span>    print <span class="colr2">(</span>  <span class="colr2">)</span> <span class="colr3">;</span>
+        </span><span><span class="colr5">}</span>
+        </span><span>
+        </span><span><span class="colr3">void</span> delete_middle <span class="colr2">(</span>  <span class="colr2">)</span> 
+        </span><span><span class="colr5">{</span>
+        </span><span>    <span class="colr3">struct</span> Node <span class="colr2">*</span>temp<span class="colr3">;</span>
+        </span><span>    <span class="colr3">struct</span> Node <span class="colr2">*</span>temp1<span class="colr3">;</span>
+        </span><span>    <span class="colr2">if</span>  <span class="colr2">(</span> head  <span class="colr2" > == </span>  NULL <span class="colr2">)</span> 
+        </span><span>    <span class="colr5">{</span>
+        </span><span>        <span class='colr2'>printf</span></span> <span class="colr2">(</span> "<span class="colr7">\n</span>linked list is already empty<span class="colr2">!</span><span class="colr2">!</span><span class="colr7">\n</span>" <span class="colr2">)</span> <span class="colr3">;</span>
+        </span><span>    <span class="colr5">}</span>
+        </span><span>    <span class="colr2">else</span>
+        </span><span>    <span class="colr5">{</span>
+        </span><span>        <span class="colr3">int</span> key = input2 <span class="colr2">(</span>  <span class="colr2">)</span> <span class="colr3">;</span>
+        </span><span>        temp = head<span class="colr3">;</span>
+        </span><span>        <span class="colr2">while</span>  <span class="colr2">(</span> temp <span class="colr2" > <span class="colr2">-</span> >  </span> data  <span class="colr2" > <span class="colr2">!</span>= </span>  key <span class="colr2">)</span> 
+        </span><span>        <span class="colr5">{</span>
+        </span><span>            temp1 = temp<span class="colr3">;</span>
+        </span><span>            temp = temp <span class="colr2" > <span class="colr2">-</span> >  </span> next<span class="colr3">;</span>
+        </span><span>        <span class="colr5">}</span>
+        </span><span>        <span class="colr2">if</span>  <span class="colr2">(</span> temp  <span class="colr2" > == </span>  head <span class="colr2">)</span> 
+        </span><span>        <span class="colr5">{</span>
+        </span><span>            delete_begin <span class="colr2">(</span>  <span class="colr2">)</span> <span class="colr3">;</span>
+        </span><span>        <span class="colr5">}</span>
+        </span><span>        <span class="colr2"><span class="colr2">else</span> <span class="colr2">if</span></span>  <span class="colr2">(</span> temp <span class="colr2" > <span class="colr2">-</span> >  </span> next  <span class="colr2" > == </span>  NULL <span class="colr2">)</span> 
+        </span><span>        <span class="colr5">{</span>
+        </span><span>            delete_end <span class="colr2">(</span>  <span class="colr2">)</span> <span class="colr3">;</span>
+        </span><span>        <span class="colr5">}</span>
+        </span><span>        <span class="colr2">else</span>
+        </span><span>        <span class="colr5">{</span>
+        </span><span>            temp = temp1<span class="colr3">;</span>
+        </span><span>            temp1 = temp <span class="colr2" > <span class="colr2">-</span> >  </span> next<span class="colr3">;</span>
+        </span><span>            temp <span class="colr2" > <span class="colr2">-</span> >  </span> next = temp1 <span class="colr2" > <span class="colr2">-</span> >  </span> next<span class="colr3">;</span>
+        </span><span>            free <span class="colr2">(</span> temp1 <span class="colr2">)</span> <span class="colr3">;</span>
+        </span><span>            <span class='colr2'>printf</span></span> <span class="colr2">(</span> "<span class="colr7">\n</span>element successfully deleted<span class="colr2">!</span><span class="colr2">!</span><span class="colr7">\n</span>" <span class="colr2">)</span> <span class="colr3">;</span>
+        </span><span>            print <span class="colr2">(</span>  <span class="colr2">)</span> <span class="colr3">;</span>
+        </span><span>        <span class="colr5">}</span>
+        </span><span>    <span class="colr5">}</span>
+        </span><span><span class="colr5">}</span>
+        </span><span>
+        </span><span><span class="colr3">void</span> print <span class="colr2">(</span>  <span class="colr2">)</span> 
+        </span><span><span class="colr5">{</span>
+        </span><span>    <span class="colr3">struct</span> Node <span class="colr2">*</span>temp<span class="colr3">;</span>
+        </span><span>    <span class='colr2'>printf</span></span> <span class="colr2">(</span>  <span class="colr6" > "printing updated list : <span class="colr5">{</span>" </span>  <span class="colr2">)</span> <span class="colr3">;</span>
+        </span><span>    temp = head<span class="colr3">;</span>
+        </span><span>    <span class="colr2">while</span>  <span class="colr2">(</span> temp <span class="colr2" > <span class="colr2">-</span> >  </span> next  <span class="colr2" > <span class="colr2">!</span>= </span>  NULL <span class="colr2">)</span> 
+        </span><span>    <span class="colr5">{</span>
+        </span><span>        <span class='colr2'>printf</span></span> <span class="colr2">(</span>  <span class="colr6" > "<span class="colr7">%d</span> <span class="colr2">,</span> " </span> <span class="colr2">,</span> temp <span class="colr2" > <span class="colr2">-</span> >  </span> data <span class="colr2">)</span> <span class="colr3">;</span>
+        </span><span>        temp = temp <span class="colr2" > <span class="colr2">-</span> >  </span> next<span class="colr3">;</span>
+        </span><span>    <span class="colr5">}</span>
+        </span><span>    <span class='colr2'>printf</span></span> <span class="colr2">(</span> "<span class="colr7">%d</span><span class="colr5">}</span><span class="colr7">\n</span>"<span class="colr2">,</span> temp <span class="colr2" > <span class="colr2">-</span> >  </span> data <span class="colr2">)</span> <span class="colr3">;</span>
+        </span><span>    temp = temp <span class="colr2" > <span class="colr2">-</span> >  </span> next<span class="colr3">;</span>
+        </span><span><span class="colr5">}</span>
+        </span><span>
+        </span><span><span class="colr3">void</span> search <span class="colr2">(</span>  <span class="colr2">)</span> 
+        </span><span><span class="colr5">{</span>
+        </span><span>    <span class="colr3">struct</span> Node <span class="colr2">*</span>temp<span class="colr3">;</span>
+        </span><span>    <span class="colr3">int</span> key = input2 <span class="colr2">(</span>  <span class="colr2">)</span> <span class="colr3">;</span>
+        </span><span>    temp = head<span class="colr3">;</span>
+        </span><span>    <span class="colr2">while</span>  <span class="colr2">(</span> temp <span class="colr2" > <span class="colr2">-</span> >  </span> data  <span class="colr2" > <span class="colr2">!</span>= </span>  key <span class="colr2">)</span> 
+        </span><span>    <span class="colr5">{</span>
+        </span><span>        temp = temp <span class="colr2" > <span class="colr2">-</span> >  </span> next<span class="colr3">;</span>
+        </span><span>    <span class="colr5">}</span>
+        </span><span>    <span class='colr2'>printf</span></span> <span class="colr2">(</span> "<span class="colr7">\n</span>temp data <span class="colr7">%d</span> at %u next member is at %u<span class="colr7">\n</span>"<span class="colr2">,</span> temp <span class="colr2" > <span class="colr2">-</span> >  </span> data<span class="colr2">,</span> temp<span class="colr2">,</span> temp <span class="colr2" > <span class="colr2">-</span> >  </span> next <span class="colr2">)</span> <span class="colr3">;</span>
+        </span><span>    print <span class="colr2">(</span>  <span class="colr2">)</span> <span class="colr3">;</span>
+        </span><span><span class="colr5">}</span>
+        </span><span>
+        </span><span><span class="colr3">int</span> main <span class="colr2">(</span> <span class="colr3">int</span> argc<span class="colr2">,</span> <span class="colr3">char</span> const <span class="colr2">*</span>argv<span class="colr5">[</span><span class="colr5">]</span> <span class="colr2">)</span> 
+        </span><span><span class="colr5">{</span>
+        </span><span>    push_end <span class="colr2">(</span>  <span class="colr2">)</span> <span class="colr3">;</span>
+        </span><span>    push_end <span class="colr2">(</span>  <span class="colr2">)</span> <span class="colr3">;</span>
+        </span><span>    push_end <span class="colr2">(</span>  <span class="colr2">)</span> <span class="colr3">;</span>
+        </span><span class="colr4">    // push_begin();
+        </span><span class="colr4">    // push_begin();
+        </span><span class="colr4">    // push_begin();
+        </span><span class="colr4">    // delete_end();
+        </span><span>    delete_middle <span class="colr2">(</span>  <span class="colr2">)</span> <span class="colr3">;</span>
+        </span><span>    insert <span class="colr2">(</span>  <span class="colr2">)</span> <span class="colr3">;</span>
+        </span><span>    <span class="colr2">return</span> 0<span class="colr3">;</span>
+        </span><span><span class="colr5">}</span>
+        </span>
+            </pre>
+        </div>
+    </div>
+    <br><br>
+    <div class="container2">
+
+        <h1 class="container2_item">
+            <pre>QUESTION</pre>
+        </h1>
+        <br>
+        <p class="container2_item">Q.1 write a code in c or c++ for implementing double-linked list functions</p>
+
+    </div>
+    <div class="container3">
+        <div class="container1">
+            <pre>
+                <span><span class="colr3">#</span><span class="colr3">include</span>  <span class="colr2"><</span> stdio.h <span class="colr2">></span> 
+            </span><span><span class="colr3">#</span><span class="colr3">include</span>  <span class="colr2"><</span> stdlib.h <span class="colr2">></span> 
+            </span><span><span class="colr3">void</span> print<span class="colr2">(</span><span class="colr2">)</span><span class="colr3">;</span>
+            </span><span><span class="colr3">struct</span> Node
+            </span><span><span class="colr5">{</span>
+            </span><span>    <span class="colr3">int</span> data<span class="colr3">;</span>
+            </span><span>    <span class="colr3">struct</span> Node <span class="colr2">*</span>next<span class="colr3">;</span>
+            </span><span>    <span class="colr3">struct</span> Node <span class="colr2">*</span>previous<span class="colr3">;</span>
+            </span><span><span class="colr5">}</span><span class="colr3">;</span>
+            </span><span><span class="colr3">struct</span> Node <span class="colr2">*</span>head<span class="colr3">;</span>
+            </span><span>
+            </span><span><span class="colr3">int</span> input<span class="colr2">(</span><span class="colr2">)</span>
+            </span><span><span class="colr5">{</span>
+            </span><span>    <span class="colr3">int</span> s<span class="colr3">;</span>
+            </span><span>    <span class='colr2'>printf</span></span><span class="colr2">(</span><span class="colr6">"enter the linked list element : "</span><span class="colr2">)</span><span class="colr3">;</span>
+            </span><span>    scanf<span class="colr2">(</span><span class="colr6">"<span class="colr7">%d</span>"</span><span class="colr2">,</span> <span class="colr2">&</span>s<span class="colr2">)</span><span class="colr3">;</span>
+            </span><span>    <span class="colr2">return</span> s<span class="colr3">;</span>
+            </span><span><span class="colr5">}</span>
+            </span><span>
+            </span><span><span class="colr3">int</span> input2<span class="colr2">(</span><span class="colr2">)</span>
+            </span><span><span class="colr5">{</span>
+            </span><span>    <span class="colr3">int</span> s<span class="colr3">;</span>
+            </span><span>    <span class='colr2'>printf</span></span><span class="colr2">(</span><span class="colr6">"enter the linked list key : "</span><span class="colr2">)</span><span class="colr3">;</span>
+            </span><span>    scanf<span class="colr2">(</span><span class="colr6">"<span class="colr7">%d</span>"</span><span class="colr2">,</span> <span class="colr2">&</span>s<span class="colr2">)</span><span class="colr3">;</span>
+            </span><span>    <span class="colr2">return</span> s<span class="colr3">;</span>
+            </span><span><span class="colr5">}</span>
+            </span><span>
+            </span><span><span class="colr3">void</span> push_end<span class="colr2">(</span><span class="colr2">)</span>
+            </span><span><span class="colr5">{</span>
+            </span><span>    <span class="colr3">struct</span> Node <span class="colr2">*</span>temp<span class="colr3">;</span>
+            </span><span>    <span class="colr3">struct</span> Node <span class="colr2">*</span>temp1<span class="colr3">;</span>
+            </span><span>    <span class="colr2">if</span> <span class="colr2">(</span>head <span class="colr2">=</span><span class="colr2">=</span> NULL<span class="colr2">)</span>
+            </span><span>    <span class="colr5">{</span>
+            </span><span>        temp <span class="colr2">=</span> <span class="colr2">(</span><span class="colr3">struct</span> Node <span class="colr2">*</span><span class="colr2">)</span>malloc<span class="colr2">(</span>sizeof<span class="colr2">(</span><span class="colr3">struct</span> Node <span class="colr2">*</span><span class="colr2">)</span><span class="colr2">)</span><span class="colr3">;</span>
+            </span><span>        temp<span class="colr2"><span class="colr2">-</span></span><span class="colr2">></span>data <span class="colr2">=</span> input<span class="colr2">(</span><span class="colr2">)</span><span class="colr3">;</span>
+            </span><span>        temp<span class="colr2"><span class="colr2">-</span></span><span class="colr2">></span>next <span class="colr2">=</span> NULL<span class="colr3">;</span>
+            </span><span>        temp<span class="colr2"><span class="colr2">-</span></span><span class="colr2">></span>previous <span class="colr2">=</span> NULL<span class="colr3">;</span>
+            </span><span>        head <span class="colr2">=</span> temp<span class="colr3">;</span>
+            </span><span>    <span class="colr5">}</span>
+            </span><span>    <span class="colr2">else</span>
+            </span><span>    <span class="colr5">{</span>
+            </span><span>        temp <span class="colr2">=</span> head<span class="colr3">;</span>
+            </span><span>        <span class="colr2">while</span> <span class="colr2">(</span>temp<span class="colr2"><span class="colr2">-</span></span><span class="colr2">></span>next <span class="colr2"><span class="colr2">!</span></span><span class="colr2">=</span> NULL<span class="colr2">)</span>
+            </span><span>        <span class="colr5">{</span>
+            </span><span>            temp <span class="colr2">=</span> temp<span class="colr2"><span class="colr2">-</span></span><span class="colr2">></span>next<span class="colr3">;</span>
+            </span><span>        <span class="colr5">}</span>
+            </span><span>        <span class="colr3">int</span> s<span class="colr3">;</span>
+            </span><span>        <span class='colr2'>printf</span></span><span class="colr2">(</span><span class="colr6">"enter the linked list element : "</span><span class="colr2">)</span><span class="colr3">;</span>
+            </span><span>        scanf<span class="colr2">(</span><span class="colr6">"<span class="colr7">%d</span>"</span><span class="colr2">,</span> <span class="colr2">&</span>s<span class="colr2">)</span><span class="colr3">;</span>
+            </span><span>        temp<span class="colr2"><span class="colr2">-</span></span><span class="colr2">></span>next <span class="colr2">=</span> <span class="colr2">(</span><span class="colr3">struct</span> Node <span class="colr2">*</span><span class="colr2">)</span>malloc<span class="colr2">(</span>sizeof<span class="colr2">(</span><span class="colr3">struct</span> Node <span class="colr2">*</span><span class="colr2">)</span><span class="colr2">)</span><span class="colr3">;</span>
+            </span><span>        <span class='colr2'>printf</span></span><span class="colr2">(</span>"memory created <span class="colr2"><span class="colr2">!</span></span><span class="colr2"><span class="colr2">!</span></span><span class="colr7">\n</span>"<span class="colr2">)</span><span class="colr3">;</span>
+            </span><span>        temp1<span class="colr2">=</span>temp<span class="colr3">;</span>
+            </span><span>        temp <span class="colr2">=</span> temp<span class="colr2"><span class="colr2">-</span></span><span class="colr2">></span>next<span class="colr3">;</span>
+            </span><span>        <span class='colr2'>printf</span></span><span class="colr2">(</span>"moved to next <span class="colr2"><span class="colr2">!</span></span><span class="colr2"><span class="colr2">!</span></span><span class="colr7">\n</span>"<span class="colr2">)</span><span class="colr3">;</span>
+            </span><span>        temp<span class="colr2"><span class="colr2">-</span></span><span class="colr2">></span>data <span class="colr2">=</span> s<span class="colr3">;</span>
+            </span><span>        temp<span class="colr2"><span class="colr2">-</span></span><span class="colr2">></span>next <span class="colr2">=</span> NULL<span class="colr3">;</span>
+            </span><span>        temp1<span class="colr2"><span class="colr2">-</span></span><span class="colr2">></span>previous<span class="colr2">=</span> temp1<span class="colr3">;</span>
+            </span><span>    <span class="colr5">}</span>
+            </span><span>    print<span class="colr2">(</span><span class="colr2">)</span><span class="colr3">;</span>
+            </span><span><span class="colr5">}</span>
+            </span><span>
+            </span><span><span class="colr3">void</span> push_begin<span class="colr2">(</span><span class="colr2">)</span>
+            </span><span><span class="colr5">{</span>
+            </span><span>    <span class="colr3">struct</span> Node <span class="colr2">*</span>temp<span class="colr3">;</span>
+            </span><span>    temp <span class="colr2">=</span> <span class="colr2">(</span><span class="colr3">struct</span> Node <span class="colr2">*</span><span class="colr2">)</span>malloc<span class="colr2">(</span>sizeof<span class="colr2">(</span><span class="colr3">struct</span> Node <span class="colr2">*</span><span class="colr2">)</span><span class="colr2">)</span><span class="colr3">;</span>
+            </span><span>    temp<span class="colr2"><span class="colr2">-</span></span><span class="colr2">></span>data <span class="colr2">=</span> input<span class="colr2">(</span><span class="colr2">)</span><span class="colr3">;</span>
+            </span><span>    temp<span class="colr2"><span class="colr2">-</span></span><span class="colr2">></span>previous <span class="colr2">=</span> NULL<span class="colr3">;</span>
+            </span><span>    temp<span class="colr2"><span class="colr2">-</span></span><span class="colr2">></span>next <span class="colr2">=</span> head<span class="colr3">;</span>
+            </span><span>    head <span class="colr2">=</span> temp<span class="colr3">;</span>
+            </span><span>    print<span class="colr2">(</span><span class="colr2">)</span><span class="colr3">;</span>
+            </span><span><span class="colr5">}</span>
+            </span><span>
+            </span><span><span class="colr3">void</span> insert<span class="colr2">(</span><span class="colr2">)</span>
+            </span><span><span class="colr5">{</span>
+            </span><span>    <span class="colr3">struct</span> Node <span class="colr2">*</span>temp<span class="colr3">;</span>
+            </span><span>    <span class="colr3">struct</span> Node <span class="colr2">*</span>temp1<span class="colr3">;</span>
+            </span><span>    <span class="colr2">if</span> <span class="colr2">(</span>head <span class="colr2">=</span><span class="colr2">=</span> NULL<span class="colr2">)</span>
+            </span><span>    <span class="colr5">{</span>
+            </span><span>        temp <span class="colr2">=</span> <span class="colr2">(</span><span class="colr3">struct</span> Node <span class="colr2">*</span><span class="colr2">)</span>malloc<span class="colr2">(</span>sizeof<span class="colr2">(</span><span class="colr3">struct</span> Node <span class="colr2">*</span><span class="colr2">)</span><span class="colr2">)</span><span class="colr3">;</span>
+            </span><span>        temp<span class="colr2"><span class="colr2">-</span></span><span class="colr2">></span>data <span class="colr2">=</span> input<span class="colr2">(</span><span class="colr2">)</span><span class="colr3">;</span>
+            </span><span>        temp<span class="colr2"><span class="colr2">-</span></span><span class="colr2">></span>previous <span class="colr2">=</span> NULL<span class="colr3">;</span>
+            </span><span>        temp<span class="colr2"><span class="colr2">-</span></span><span class="colr2">></span>next <span class="colr2">=</span> head<span class="colr3">;</span>
+            </span><span>        head <span class="colr2">=</span> temp<span class="colr3">;</span>
+            </span><span>    <span class="colr5">}</span>
+            </span><span>
+            </span><span>    <span class="colr2">else</span>
+            </span><span>    <span class="colr5">{</span>
+            </span><span>        <span class="colr3">int</span> key <span class="colr2">=</span> input2<span class="colr2">(</span><span class="colr2">)</span><span class="colr3">;</span>
+            </span><span>        temp <span class="colr2">=</span> head<span class="colr3">;</span>
+            </span><span>        <span class="colr2">while</span> <span class="colr2">(</span>temp<span class="colr2"><span class="colr2">-</span></span><span class="colr2">></span>data <span class="colr2"><span class="colr2">!</span></span><span class="colr2">=</span> key<span class="colr2">)</span>
+            </span><span>        <span class="colr5">{</span>
+            </span><span>            temp <span class="colr2">=</span> temp<span class="colr2"><span class="colr2">-</span></span><span class="colr2">></span>next<span class="colr3">;</span>
+            </span><span>        <span class="colr5">}</span>
+            </span><span>        <span class="colr2">if</span> <span class="colr2">(</span>temp<span class="colr2"><span class="colr2">-</span></span><span class="colr2">></span>next <span class="colr2">=</span><span class="colr2">=</span> NULL<span class="colr2">)</span>
+            </span><span>        <span class="colr5">{</span>
+            </span><span>            push_end<span class="colr2">(</span><span class="colr2">)</span><span class="colr3">;</span>
+            </span><span>        <span class="colr5">}</span>
+            </span><span>        <span class="colr2">else</span>
+            </span><span>        <span class="colr5">{</span>
+            </span><span>            <span class="colr3">int</span> s<span class="colr2">=</span> input<span class="colr2">(</span><span class="colr2">)</span><span class="colr3">;</span>
+            </span><span>            temp1 <span class="colr2">=</span> <span class="colr2">(</span><span class="colr3">struct</span> Node <span class="colr2">*</span><span class="colr2">)</span>malloc<span class="colr2">(</span>sizeof<span class="colr2">(</span><span class="colr3">struct</span> Node <span class="colr2">*</span><span class="colr2">)</span><span class="colr2">)</span><span class="colr3">;</span>
+            </span><span>            <span class='colr2'>printf</span></span><span class="colr2">(</span>"memory created <span class="colr2"><span class="colr2">!</span></span><span class="colr2"><span class="colr2">!</span></span><span class="colr7">\n</span>"<span class="colr2">)</span><span class="colr3">;</span>
+            </span><span>            temp1<span class="colr2"><span class="colr2">-</span></span><span class="colr2">></span>next <span class="colr2">=</span> temp<span class="colr2"><span class="colr2">-</span></span><span class="colr2">></span>next<span class="colr3">;</span>
+            </span><span>            temp<span class="colr2"><span class="colr2">-</span></span><span class="colr2">></span>next <span class="colr2">=</span> temp1<span class="colr3">;</span>
+            </span><span>            temp1<span class="colr2"><span class="colr2">-</span></span><span class="colr2">></span>previous <span class="colr2">=</span> temp<span class="colr3">;</span>
+            </span><span>            <span class='colr2'>printf</span></span><span class="colr2">(</span>"moved to next <span class="colr2"><span class="colr2">!</span></span><span class="colr2"><span class="colr2">!</span></span><span class="colr7">\n</span>"<span class="colr2">)</span><span class="colr3">;</span>
+            </span><span>            temp1<span class="colr2"><span class="colr2">-</span></span><span class="colr2">></span>data <span class="colr2">=</span> s<span class="colr3">;</span>
+            </span><span>            print<span class="colr2">(</span><span class="colr2">)</span><span class="colr3">;</span>
+            </span><span>        <span class="colr5">}</span>
+            </span><span>    <span class="colr5">}</span>
+            </span><span><span class="colr5">}</span>
+            </span><span>
+            </span><span><span class="colr3">void</span> delete_end<span class="colr2">(</span><span class="colr2">)</span>
+            </span><span><span class="colr5">{</span>
+            </span><span>    <span class="colr3">struct</span> Node <span class="colr2">*</span>temp<span class="colr3">;</span>
+            </span><span>    <span class="colr3">struct</span> Node <span class="colr2">*</span>temp1<span class="colr3">;</span>
+            </span><span>    <span class="colr2">if</span> <span class="colr2">(</span>head <span class="colr2">=</span><span class="colr2">=</span> NULL<span class="colr2">)</span>
+            </span><span>    <span class="colr5">{</span>
+            </span><span>        <span class='colr2'>printf</span></span><span class="colr2">(</span>"<span class="colr7">\n</span>linked list is already empty<span class="colr2"><span class="colr2">!</span></span><span class="colr2"><span class="colr2">!</span></span><span class="colr7">\n</span><span class="colr7">\n</span>"<span class="colr2">)</span><span class="colr3">;</span>
+            </span><span>    <span class="colr5">}</span>
+            </span><span>    <span class="colr2">else</span>
+            </span><span>    <span class="colr5">{</span>
+            </span><span>        temp <span class="colr2">=</span> head<span class="colr3">;</span>
+            </span><span>        <span class="colr2">while</span> <span class="colr2">(</span>temp<span class="colr2"><span class="colr2">-</span></span><span class="colr2">></span>next <span class="colr2"><span class="colr2">!</span></span><span class="colr2">=</span> NULL<span class="colr2">)</span>
+            </span><span>        <span class="colr5">{</span>
+            </span><span>            temp1 <span class="colr2">=</span> temp<span class="colr3">;</span>
+            </span><span>            temp <span class="colr2">=</span> temp<span class="colr2"><span class="colr2">-</span></span><span class="colr2">></span>next<span class="colr3">;</span>
+            </span><span>        <span class="colr5">}</span>
+            </span><span>        <span class="colr3">int</span> s<span class="colr3">;</span>
+            </span><span>        temp1<span class="colr2"><span class="colr2">-</span></span><span class="colr2">></span>next <span class="colr2">=</span> NULL<span class="colr3">;</span>
+            </span><span>        free<span class="colr2">(</span>temp<span class="colr2">)</span><span class="colr3">;</span>
+            </span><span>        <span class='colr2'>printf</span></span><span class="colr2">(</span>"last element is successfully delted<span class="colr2"><span class="colr2">!</span></span><span class="colr2"><span class="colr2">!</span></span><span class="colr7">\n</span>"<span class="colr2">)</span><span class="colr3">;</span>
+            </span><span>        print<span class="colr2">(</span><span class="colr2">)</span><span class="colr3">;</span>
+            </span><span>    <span class="colr5">}</span>
+            </span><span><span class="colr5">}</span>
+            </span><span>
+            </span><span><span class="colr3">void</span> delete_begin<span class="colr2">(</span><span class="colr2">)</span>
+            </span><span><span class="colr5">{</span>
+            </span><span>    <span class="colr3">struct</span> Node <span class="colr2">*</span>temp<span class="colr3">;</span>
+            </span><span>    temp <span class="colr2">=</span> head<span class="colr3">;</span>
+            </span><span>    head <span class="colr2">=</span> temp<span class="colr2"><span class="colr2">-</span></span><span class="colr2">></span>next<span class="colr3">;</span>
+            </span><span>    free<span class="colr2">(</span>temp<span class="colr2">)</span><span class="colr3">;</span>
+            </span><span>    <span class='colr2'>printf</span></span><span class="colr2">(</span>"first element is successfully delted<span class="colr2"><span class="colr2">!</span></span><span class="colr2"><span class="colr2">!</span></span><span class="colr7">\n</span>"<span class="colr2">)</span><span class="colr3">;</span>
+            </span><span>    print<span class="colr2">(</span><span class="colr2">)</span><span class="colr3">;</span>
+            </span><span><span class="colr5">}</span>
+            </span><span>
+            </span><span><span class="colr3">void</span> delete_middle<span class="colr2">(</span><span class="colr2">)</span>
+            </span><span><span class="colr5">{</span>
+            </span><span>    <span class="colr3">struct</span> Node <span class="colr2">*</span>temp<span class="colr3">;</span>
+            </span><span>    <span class="colr3">struct</span> Node <span class="colr2">*</span>temp1<span class="colr3">;</span>
+            </span><span>    <span class="colr3">struct</span> Node <span class="colr2">*</span>temp2<span class="colr3">;</span>
+            </span><span>    <span class="colr2">if</span> <span class="colr2">(</span>head <span class="colr2">=</span><span class="colr2">=</span> NULL<span class="colr2">)</span>
+            </span><span>    <span class="colr5">{</span>
+            </span><span>        <span class='colr2'>printf</span></span><span class="colr2">(</span>"<span class="colr7">\n</span>linked list is already empty<span class="colr2"><span class="colr2">!</span></span><span class="colr2"><span class="colr2">!</span></span><span class="colr7">\n</span>"<span class="colr2">)</span><span class="colr3">;</span>
+            </span><span>    <span class="colr5">}</span>
+            </span><span>    <span class="colr2">else</span>
+            </span><span>    <span class="colr5">{</span>
+            </span><span>        <span class="colr3">int</span> key <span class="colr2">=</span> input2<span class="colr2">(</span><span class="colr2">)</span><span class="colr3">;</span>
+            </span><span>        temp <span class="colr2">=</span> head<span class="colr3">;</span>
+            </span><span>        <span class="colr2">while</span> <span class="colr2">(</span>temp<span class="colr2"><span class="colr2">-</span></span><span class="colr2">></span>data <span class="colr2"><span class="colr2">!</span></span><span class="colr2">=</span> key<span class="colr2">)</span>
+            </span><span>        <span class="colr5">{</span>
+            </span><span>            temp1 <span class="colr2">=</span> temp<span class="colr3">;</span>
+            </span><span>            temp <span class="colr2">=</span> temp<span class="colr2"><span class="colr2">-</span></span><span class="colr2">></span>next<span class="colr3">;</span>
+            </span><span>        <span class="colr5">}</span>
+            </span><span>        <span class="colr2">if</span> <span class="colr2">(</span>temp <span class="colr2">=</span><span class="colr2">=</span> head<span class="colr2">)</span>
+            </span><span>        <span class="colr5">{</span>
+            </span><span>            delete_begin<span class="colr2">(</span><span class="colr2">)</span><span class="colr3">;</span>
+            </span><span>        <span class="colr5">}</span>
+            </span><span>        <span class="colr2"><span class="colr2">else</span> <span class="colr2">if</span></span> <span class="colr2">(</span>temp<span class="colr2"><span class="colr2">-</span></span><span class="colr2">></span>next <span class="colr2">=</span><span class="colr2">=</span> NULL<span class="colr2">)</span>
+            </span><span>        <span class="colr5">{</span>
+            </span><span>            delete_end<span class="colr2">(</span><span class="colr2">)</span><span class="colr3">;</span>
+            </span><span>        <span class="colr5">}</span>
+            </span><span>        <span class="colr2">else</span>
+            </span><span>        <span class="colr5">{</span>
+            </span><span>            temp <span class="colr2">=</span> temp1<span class="colr3">;</span>
+            </span><span>            temp1 <span class="colr2">=</span> temp<span class="colr2"><span class="colr2">-</span></span><span class="colr2">></span>next<span class="colr3">;</span>
+            </span><span>            temp<span class="colr2"><span class="colr2">-</span></span><span class="colr2">></span>next <span class="colr2">=</span> temp1<span class="colr2"><span class="colr2">-</span></span><span class="colr2">></span>next<span class="colr3">;</span>
+            </span><span>            temp2<span class="colr2">=</span>temp1<span class="colr2"><span class="colr2">-</span></span><span class="colr2">></span>next<span class="colr3">;</span>
+            </span><span>            temp2<span class="colr2"><span class="colr2">-</span></span><span class="colr2">></span>previous<span class="colr2">=</span>temp<span class="colr3">;</span>
+            </span><span>            temp1<span class="colr2"><span class="colr2">-</span></span><span class="colr2">></span>previous <span class="colr2">=</span> temp<span class="colr3">;</span>
+            </span><span>            free<span class="colr2">(</span>temp1<span class="colr2">)</span><span class="colr3">;</span>
+            </span><span>            <span class='colr2'>printf</span></span><span class="colr2">(</span>"<span class="colr7">\n</span>element successfully deleted<span class="colr2"><span class="colr2">!</span></span><span class="colr2"><span class="colr2">!</span></span><span class="colr7">\n</span>"<span class="colr2">)</span><span class="colr3">;</span>
+            </span><span>            print<span class="colr2">(</span><span class="colr2">)</span><span class="colr3">;</span>
+            </span><span>        <span class="colr5">}</span>
+            </span><span>    <span class="colr5">}</span>
+            </span><span><span class="colr5">}</span>
+            </span><span>
+            </span><span><span class="colr3">void</span> print<span class="colr2">(</span><span class="colr2">)</span>
+            </span><span><span class="colr5">{</span>
+            </span><span>    <span class="colr3">struct</span> Node <span class="colr2">*</span>temp<span class="colr3">;</span>
+            </span><span>    <span class='colr2'>printf</span></span><span class="colr2">(</span><span class="colr6">"printing updated list : <span class="colr5">{</span>"</span><span class="colr2">)</span><span class="colr3">;</span>
+            </span><span>    temp <span class="colr2">=</span> head<span class="colr3">;</span>
+            </span><span>    <span class="colr2">while</span> <span class="colr2">(</span>temp<span class="colr2"><span class="colr2">-</span></span><span class="colr2">></span>next <span class="colr2"><span class="colr2">!</span></span><span class="colr2">=</span> NULL<span class="colr2">)</span>
+            </span><span>    <span class="colr5">{</span>
+            </span><span>        <span class='colr2'>printf</span></span><span class="colr2">(</span>"<span class="colr7">%d</span> <span class="colr2">,</span> "<span class="colr2">,</span> temp<span class="colr2"><span class="colr2">-</span></span><span class="colr2">></span>data<span class="colr2">)</span><span class="colr3">;</span>
+            </span><span>        temp <span class="colr2">=</span> temp<span class="colr2"><span class="colr2">-</span></span><span class="colr2">></span>next<span class="colr3">;</span>
+            </span><span>    <span class="colr5">}</span>
+            </span><span>    <span class='colr2'>printf</span></span><span class="colr2">(</span>"<span class="colr7">%d</span><span class="colr5">}</span><span class="colr7">\n</span>"<span class="colr2">,</span> temp<span class="colr2"><span class="colr2">-</span></span><span class="colr2">></span>data<span class="colr2">)</span><span class="colr3">;</span>
+            </span><span>    temp <span class="colr2">=</span> temp<span class="colr2"><span class="colr2">-</span></span><span class="colr2">></span>next<span class="colr3">;</span>
+            </span><span><span class="colr5">}</span>
+            </span><span>
+            </span><span><span class="colr3">void</span> search<span class="colr2">(</span><span class="colr2">)</span>
+            </span><span><span class="colr5">{</span>
+            </span><span>    <span class="colr3">struct</span> Node <span class="colr2">*</span>temp<span class="colr3">;</span>
+            </span><span>    <span class="colr3">int</span> key <span class="colr2">=</span> input2<span class="colr2">(</span><span class="colr2">)</span><span class="colr3">;</span>
+            </span><span>    temp <span class="colr2">=</span> head<span class="colr3">;</span>
+            </span><span>    <span class="colr2">while</span> <span class="colr2">(</span>temp<span class="colr2"><span class="colr2">-</span></span><span class="colr2">></span>data <span class="colr2"><span class="colr2">!</span></span><span class="colr2">=</span> key<span class="colr2">)</span>
+            </span><span>    <span class="colr5">{</span>
+            </span><span>        temp <span class="colr2">=</span> temp<span class="colr2"><span class="colr2">-</span></span><span class="colr2">></span>next<span class="colr3">;</span>
+            </span><span>    <span class="colr5">}</span>
+            </span><span>    <span class='colr2'>printf</span></span><span class="colr2">(</span>"<span class="colr7">\n</span>temp data <span class="colr7">%d</span> at <span class="colr7">%u</span> next member is at <span class="colr7">%u</span><span class="colr7">\n</span>"<span class="colr2">,</span> temp<span class="colr2"><span class="colr2">-</span></span><span class="colr2">></span>data<span class="colr2">,</span> temp<span class="colr2">,</span> temp<span class="colr2"><span class="colr2">-</span></span><span class="colr2">></span>next<span class="colr2">)</span><span class="colr3">;</span>
+            </span><span>    print<span class="colr2">(</span><span class="colr2">)</span><span class="colr3">;</span>
+            </span><span><span class="colr5">}</span>
+            </span><span>
+            </span><span><span class="colr3">int</span> main<span class="colr2">(</span><span class="colr3">int</span> argc<span class="colr2">,</span> <span class="colr3">char</span> const <span class="colr2">*</span>argv<span class="colr5">[</span><span class="colr5">]</span><span class="colr2">)</span>
+            </span><span><span class="colr5">{</span>
+            </span><span>    push_end<span class="colr2">(</span><span class="colr2">)</span><span class="colr3">;</span>
+            </span><span>    push_end<span class="colr2">(</span><span class="colr2">)</span><span class="colr3">;</span>
+            </span><span>    push_end<span class="colr2">(</span><span class="colr2">)</span><span class="colr3">;</span>
+            </span><span>    push_begin<span class="colr2">(</span><span class="colr2">)</span><span class="colr3">;</span>
+            </span><span>    push_begin<span class="colr2">(</span><span class="colr2">)</span><span class="colr3">;</span>
+            </span><span class="colr4">    // push_begin();
+            </span><span class="colr4">    // delete_end();
+            </span><span>    delete_middle<span class="colr2">(</span><span class="colr2">)</span><span class="colr3">;</span>
+            </span><span>    insert<span class="colr2">(</span><span class="colr2">)</span><span class="colr3">;</span>
+            </span><span>    <span class="colr2">return</span> 0<span class="colr3">;</span>
+            </span><span><span class="colr5">}</span></span>
+            </pre>
+        </div>
+    </div>
+</body>
+
+</html>

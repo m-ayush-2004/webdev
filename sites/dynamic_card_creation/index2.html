@@ -1,0 +1,640 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet integrity="
+        sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital@0;1&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,500;1,300;1,400&display=swap"
+        rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        body {
+            color: white;
+            font-size: 100.5;
+            line-height: auto;
+            background-color: rgb(28, 27, 27);
+        }
+        pre{
+            overflow: visible;
+        }
+        ::-webkit-scrollbar {
+            width: 7px !important;
+            height: 7px !important;
+        }
+
+        /* Track */
+        ::-webkit-scrollbar-track {
+            background: rgb(72, 71, 71);
+            border-radius: 14px;
+        }
+
+        /* Handle */
+        ::-webkit-scrollbar-thumb {
+            background: #555;
+            border-radius: 14px;
+        }
+
+        /* Handle on hover */
+        ::-webkit-scrollbar-thumb:hover {
+            background: #979797;
+        }
+
+        .central {
+            display: flex;
+            justify-content: center;
+            justify-self: center;
+            align-self: center;
+            align-items: center;
+        }
+
+
+        .container3 {
+            margin-left: 10%;
+            width: 80vw;
+            height: 520px;
+            background-color: #2c2d30;
+            justify-self: baseline;
+            align-self: center;
+            align-items: center;
+            border-radius: 20px;
+        }
+
+        .container1 {
+            margin-right: 20px;
+            width: auto;
+            padding: 20px;
+            overflow-y: scroll;
+            overflow-x: scroll;
+            height: 500px;
+            background-color: #2c2d30;
+            justify-self: center;
+            align-self: center;
+            align-items: center;
+            border-radius: 20px;
+        }
+
+        .container2 {
+            margin-left: 10%;
+            width: 80vw;
+            height: auto;
+            padding: 20px;
+            background-color: #344f4a;
+            justify-self: center;
+            align-self: center;
+            align-items: center;
+            border-radius: 20px;
+
+        }
+
+        .container2_item {
+            padding-left: 40px;
+
+        }
+
+        :root {
+            --bs-body-line-height: 30.25px;
+        }
+
+        .colr2 {
+            color: rgb(232, 74, 151);
+        }
+
+        .colr3 {
+            color: rgb(4, 193, 226);
+        }
+
+        .colr4 {
+            color: rgb(88, 157, 45);
+        }
+
+        .colr5 {
+            color: rgb(211, 183, 0);
+        }
+
+        .colr6 {
+            color: rgb(197, 131, 32);
+        }
+
+        .colr6imp {
+            color: rgb(197, 131, 32) !important;
+        }
+
+        .colr7 {
+            color: rgb(223, 199, 91);
+        }
+
+        .colr8 {
+            color: rgb(238, 220, 142);
+        }
+
+        pre {
+            margin: 0px;
+            font-size: 15.5;
+        }
+
+        span {
+            margin: 0px;
+        }
+    </style>
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="container2">
+
+        <h1 class="container2_item">
+            <pre>QUESTION</pre>
+        </h1>
+        <br>
+        <p class="container2_item">Q.1 write all the known sorting algorithms that you know in the function form and
+            show the result?</p>
+
+    </div>
+    <br>
+    <div class="container3">
+        <div class="container1">
+            <pre>
+                #include < iostream >
+                    using namespace std;
+                    
+                    void swap(int *a , int i, int j){
+                        int temp = a[i];
+                        a[i]=a[j];
+                        a[j]=temp;
+                    }
+                    int insert(int *a , int i){
+                        a[i+1]=a[i];
+                        i--;
+                        return i;
+                    }
+                    
+                    
+                    void bubble_sort(int* a, int n){
+                        for (int i = 0; i < n; i++){
+                            for (int j = 0; j < n; j++){
+                                if(a[j]>a[j+1])
+                            swap(a,j,j+1);
+                            }
+                        }
+                        cout<<"sorted array : ";
+                        for(int i = 0 ; i< n; i++){
+                            printf("%d " , *(a + i));
+                        }
+                        cout<<"\n";
+                    }
+                    
+                    void instertion_sort(int *a,int n){
+                        for (int i = 0; i < n; i++)
+                        {
+                            int key=a[i];
+                            int j=i-1;
+                            while (j>-1 && a[j]>=key){
+                                j=insert(a,j);
+                            }
+                            a[j+1]=key;
+                        }
+                        cout<<"sorted array : ";
+                        for(int i = 0 ; i< n; i++){
+                            printf("%d " , *(a + i));
+                        }
+                        cout<<"\n";
+                    }
+                    
+                    void selection_sort(int *a,int n){
+                        for (int i = 0; i < n; i++)
+                        {
+                            int min_index=i;
+                            for (int j=i ; j< n ; j++){
+                                if (a[j]<= a[min_index])
+                            min_index=j;
+                            }
+                            swap(a,i,min_index);
+                        }
+                        cout<< "sorted array : ";
+                        for(int i = 0 ; i< n; i++){
+                            printf("%d " , *(a + i));
+                        }
+                        cout<<"\n";
+                    }
+                    
+                    void binary_search(int *a,int r,int n, int search){
+                        int q=(r+n)/2;
+                        if(a[q] < search)
+                            binary_search(a,q+1,n,search);
+                        else if(a[q]>search)
+                            binary_search(a,r,q,search);
+                        if(a[q]==search )
+                            cout<<"the location of "<< search<<" is at : "<< q+1;
+                        
+                    }
+                    
+                    void merge(int *a,int l,int m,int n, int r){
+                        int size1=m-l+1,size2=n-m,size3=r-n+1;
+                        int left[size1],middle[size2],right[size3];
+                        int i,j,k,o;
+                        for(i = 0 ; i< size1; i++){
+                            left[i]=a[l+i];}
+                        for(i = 0 ; i< size2; i++){
+                            middle[i]=a[m+1+i];}
+                        for(i = 0 ; i< size3; i++){
+                            right[i]=a[n+1+i];}
+                        i=j=k=0;
+                        o=l;
+                        while (i < size1 && j < size2 && k< size3){
+                            if (left[i] <= middle[j] && left[i] <= right[k]){
+                                a[o]=left[i];
+                                i++;
+                            }
+                            else if (middle[j]<=left[i] && middle[j]<=right[k]){
+                                a[o]=middle[j];
+                                j++;
+                            }
+                            else if (right[k] <= middle[j] && right[k]<= left[i]){
+                                a[o]=right[k];
+                                k++;
+                            }
+                            o++;
+                        }
+                        while (i < size1 && j < size2){
+                            if (left[i] <= middle[j]){
+                                a[o]=left[i];
+                                i++;
+                            }
+                            else{
+                                a[o]=middle[j];
+                                j++;
+                            }
+                            o++;
+                        }
+                        while (j < size1 && k < size3){
+                            if (middle[j] <= right[k]){
+                                a[o]=middle[j];
+                                j++;
+                            }
+                            else{
+                                a[o]=right[k];
+                                k++;
+                            }
+                            o++;
+                        }
+                        while (i < size1 && j < size2){
+                            if (left[i] <= right[j]){
+                                a[o]=left[i];
+                                i++;
+                            }
+                            else{
+                                a[o]=right[j];
+                                j++;
+                            }
+                            o++;
+                        }
+                        while (i < size1) {
+                            a[o] = left[i];
+                            i++;
+                            o++;
+                        }
+                        while (j < size2) {
+                            a[o] = middle[j];
+                            j++;
+                            o++;
+                        }
+                        while (k < size3) {
+                            a[o] = right[k];
+                            k++;
+                            o++;
+                        }
+                    }
+                    
+                    void merge_sort(int *a,int l,int r){
+                        int m= (l + r-1)/3;
+                        int n= ((l + r-1)/3)+m;
+                        if(l< m  && m< n && n< r){
+                            merge_sort(a, l, m);
+                            merge_sort(a, m+1, n);
+                            merge_sort(a, n+1, r);
+                            merge(a, l, m, n, r);
+                        }
+                    }
+                    
+                    // void quick_sort(int *a, int n){
+                    // }
+                    void leniar_search(int *a,int r,int n, int search){
+                        for (int i = 0; i < n; i++)
+                        {
+                            if(a[i]==search){
+                            cout<<"the location of "<< search<<" is at : "<< i+1<< endl;
+                            }
+                        }
+                        
+                    }
+                    
+                    void quick_sort(int* a, int l, int r){
+                        int key=a[r];
+                        cout<< key<< endl;
+                        int n,m;
+                        m=0;n=0;
+                        while (m< r-2)
+                        {
+                            if (a[n]<=key){
+                                n++;
+                                m++;
+                            }
+                            else{
+                                m++;
+                                swap(a,n,m);
+                                cout<< n<<"-->"<< m<< endl;
+                                n++;
+                            }
+                        }
+                        swap(a,n,r-1);
+                        // quick_sort(a,l,m-1);
+                        // quick_sort(a,m+1,r);
+                    }
+                    
+                    int main(int argc, char const *argv[])
+                    {
+                        int arr[]={1,3,21,6,7,7,5,4,8,9,10,55,7};
+                        int n=sizeof(arr)/sizeof(int);
+                        cout<<"input array : ";
+                        for(int i = 0 ; i< n; i++){
+                            printf("%d " , *(arr + i));
+                        }
+                        cout<<"\n";
+                        cout<< n;
+                        cout<<"\n";
+                        // bubble_sort(arr,n);
+                        // instertion_sort(arr,n);
+                        // selection_sort(arr,n);
+                        merge_sort(arr,0,n-1);
+                        // quick_sort(arr,0,n);
+                        cout<<"sorted array : ";
+                        for(int i = 0 ; i< n; i++){
+                            printf("%d " , *(arr + i));
+                        }
+                        // cout<<"\n\n";
+                        // binary_search(arr,0,n,7);
+                        // cout<<"\n\n\n";
+                        // leniar_search(arr,0,n,7);
+                        return 0;
+                    }
+                    
+            </pre>
+        </div>
+    </div>
+    
+    <br><br>
+
+    <div class="container2">
+
+        <h1 class="container2_item">
+            <pre>QUESTION</pre>
+        </h1>
+        <br>
+        <p class="container2_item">Q.1 write all the known sorting algorithms that you know in the function form and
+            show the result?</p>
+
+    </div>
+    <br>
+    <div class="container3">
+        <div class="container1">
+            <pre><span><span class="colr3">#</span><span class="colr3">include</span> <span class="colr2"><</span> iostream <span class="colr2">></span> 
+            </span><span><span class="colr2">using</span> <span class="colr3">namespace</span> std<span class="colr2">;</span>
+            </span><span>
+            </span><span><span class="colr3">void</span> swap<span class="colr2">(</span><span class="colr3">int</span> <span class="colr2">*</span>a <span class="colr2">,</span> <span class="colr3">int</span> i<span class="colr2">,</span> <span class="colr3">int</span> j<span class="colr2">)</span><span class="colr5">{</span>
+            </span><span>    <span class="colr3">int</span> temp <span class="colr2">=</span> a<span class="colr5">[</span>i<span class="colr5">]</span><span class="colr2">;</span>
+            </span><span>    a<span class="colr5">[</span>i<span class="colr5">]</span><span class="colr2">=</span>a<span class="colr5">[</span>j<span class="colr5">]</span><span class="colr2">;</span>
+            </span><span>    a<span class="colr5">[</span>j<span class="colr5">]</span><span class="colr2">=</span>temp<span class="colr2">;</span>
+            </span><span><span class="colr5">}</span>
+            </span><span><span class="colr3">int</span> insert<span class="colr2">(</span><span class="colr3">int</span> <span class="colr2">*</span>a <span class="colr2">,</span> <span class="colr3">int</span> i<span class="colr2">)</span><span class="colr5">{</span>
+            </span><span>    a<span class="colr5">[</span>i<span class="colr2">+</span>1<span class="colr5">]</span><span class="colr2">=</span>a<span class="colr5">[</span>i<span class="colr5">]</span><span class="colr2">;</span>
+            </span><span>    i<span class="colr2"><span class="colr2">-</span></span><span class="colr2"><span class="colr2">-</span></span><span class="colr2">;</span>
+            </span><span>    <span class="colr2">return</span> i<span class="colr2">;</span>
+            </span><span><span class="colr5">}</span>
+            </span><span>
+            </span><span>
+            </span><span><span class="colr3">void</span> bubble_sort<span class="colr2">(</span><span class="colr3">int</span><span class="colr2">*</span> a<span class="colr2">,</span> <span class="colr3">int</span> n<span class="colr2">)</span><span class="colr5">{</span>
+            </span><span>    <span class="colr2">for</span> <span class="colr2">(</span><span class="colr3">int</span> i <span class="colr2">=</span> 0<span class="colr2">;</span> i  <span class="colr2"><</span>  n<span class="colr2">;</span> i<span class="colr2">+</span><span class="colr2">+</span><span class="colr2">)</span><span class="colr5">{</span>
+            </span><span>        <span class="colr2">for</span> <span class="colr2">(</span><span class="colr3">int</span> j <span class="colr2">=</span> 0<span class="colr2">;</span> j  <span class="colr2"><</span>  n<span class="colr2">;</span> j<span class="colr2">+</span><span class="colr2">+</span><span class="colr2">)</span><span class="colr5">{</span>
+            </span><span>            <span class="colr2">if</span><span class="colr2">(</span>a<span class="colr5">[</span>j<span class="colr5">]</span> <span class="colr2">></span> a<span class="colr5">[</span>j<span class="colr2">+</span>1<span class="colr5">]</span><span class="colr2">)</span>
+            </span><span>        swap<span class="colr2">(</span>a<span class="colr2">,</span>j<span class="colr2">,</span>j<span class="colr2">+</span>1<span class="colr2">)</span><span class="colr2">;</span>
+            </span><span>        <span class="colr5">}</span>
+            </span><span>    <span class="colr5">}</span>
+            </span><span>    <span class="colr3">cout</span> <span class="colr2"><</span><span class="colr2"><</span> <span class="colr6imp">"sorted array : "</span><span class="colr2">;</span>
+            </span><span>    <span class="colr2">for</span><span class="colr2">(</span><span class="colr3">int</span> i <span class="colr2">=</span> 0 <span class="colr2">;</span> i <span class="colr2"><</span> n<span class="colr2">;</span> i<span class="colr2">+</span><span class="colr2">+</span><span class="colr2">)</span><span class="colr5">{</span>
+            </span><span>        <span class='colr2'>printf</span><span class="colr2">(</span><span class="colr6imp">"<span class="colr7">%d</span> "</span> <span class="colr2">,</span> <span class="colr2">*</span><span class="colr2">(</span>a <span class="colr2">+</span> i<span class="colr2">)</span><span class="colr2">)</span><span class="colr2">;</span>
+            </span><span>    <span class="colr5">}</span>
+            </span><span>    <span class="colr3">cout</span> <span class="colr2"><</span><span class="colr2"><</span> <span class="colr6imp">"<span class="colr7">\n</span>"</span><span class="colr2">;</span>
+            </span><span><span class="colr5">}</span>
+            </span><span>
+            </span><span><span class="colr3">void</span> instertion_sort<span class="colr2">(</span><span class="colr3">int</span> <span class="colr2">*</span>a<span class="colr2">,</span><span class="colr3">int</span> n<span class="colr2">)</span><span class="colr5">{</span>
+            </span><span>    <span class="colr2">for</span> <span class="colr2">(</span><span class="colr3">int</span> i <span class="colr2">=</span> 0<span class="colr2">;</span> i  <span class="colr2"><</span>  n<span class="colr2">;</span> i<span class="colr2">+</span><span class="colr2">+</span><span class="colr2">)</span>
+            </span><span>    <span class="colr5">{</span>
+            </span><span>        <span class="colr3">int</span> key<span class="colr2">=</span>a<span class="colr5">[</span>i<span class="colr5">]</span><span class="colr2">;</span>
+            </span><span>        <span class="colr3">int</span> j<span class="colr2">=</span>i<span class="colr2"><span class="colr2">-</span></span>1<span class="colr2">;</span>
+            </span><span>        <span class="colr2">while</span> <span class="colr2">(</span>j<span class="colr2">></span><span class="colr2"><span class="colr2">-</span></span>1 <span class="colr2">&</span><span class="colr2">&</span> a<span class="colr5">[</span>j<span class="colr5">]</span><span class="colr2">></span><span class="colr2">=</span>key<span class="colr2">)</span><span class="colr5">{</span>
+            </span><span>            j<span class="colr2">=</span>insert<span class="colr2">(</span>a<span class="colr2">,</span>j<span class="colr2">)</span><span class="colr2">;</span>
+            </span><span>        <span class="colr5">}</span>
+            </span><span>        a<span class="colr5">[</span>j<span class="colr2">+</span>1<span class="colr5">]</span><span class="colr2">=</span>key<span class="colr2">;</span>
+            </span><span>    <span class="colr5">}</span>
+            </span><span>    <span class="colr3">cout</span> <span class="colr2"><</span><span class="colr2"><</span> <span class="colr6imp">"sorted array : "</span><span class="colr2">;</span>
+            </span><span>    <span class="colr2">for</span><span class="colr2">(</span><span class="colr3">int</span> i <span class="colr2">=</span> 0 <span class="colr2">;</span> i <span class="colr2"><</span> n<span class="colr2">;</span> i<span class="colr2">+</span><span class="colr2">+</span><span class="colr2">)</span><span class="colr5">{</span>
+            </span><span>        <span class='colr2'>printf</span><span class="colr2">(</span><span class="colr6imp">"<span class="colr7">%d</span> "</span> <span class="colr2">,</span> <span class="colr2">*</span><span class="colr2">(</span>a <span class="colr2">+</span> i<span class="colr2">)</span><span class="colr2">)</span><span class="colr2">;</span>
+            </span><span>    <span class="colr5">}</span>
+            </span><span>    <span class="colr3">cout</span> <span class="colr2"><</span><span class="colr2"><</span> <span class="colr6imp">"<span class="colr7">\n</span>"</span><span class="colr2">;</span>
+            </span><span><span class="colr5">}</span>
+            </span><span>
+            </span><span><span class="colr3">void</span> selection_sort<span class="colr2">(</span><span class="colr3">int</span> <span class="colr2">*</span>a<span class="colr2">,</span><span class="colr3">int</span> n<span class="colr2">)</span><span class="colr5">{</span>
+            </span><span>    <span class="colr2">for</span> <span class="colr2">(</span><span class="colr3">int</span> i <span class="colr2">=</span> 0<span class="colr2">;</span> i  <span class="colr2"><</span>  n<span class="colr2">;</span> i<span class="colr2">+</span><span class="colr2">+</span><span class="colr2">)</span>
+            </span><span>    <span class="colr5">{</span>
+            </span><span>        <span class="colr3">int</span> min_index<span class="colr2">=</span>i<span class="colr2">;</span>
+            </span><span>        <span class="colr2">for</span> <span class="colr2">(</span><span class="colr3">int</span> j<span class="colr2">=</span>i <span class="colr2">;</span> j <span class="colr2"><</span> n <span class="colr2">;</span> j<span class="colr2">+</span><span class="colr2">+</span><span class="colr2">)</span><span class="colr5">{</span>
+            </span><span>            <span class="colr2">if</span> <span class="colr2">(</span>a<span class="colr5">[</span>j<span class="colr5">]</span> <span class="colr2"><</span> <span class="colr2">=</span>a<span class="colr5">[</span>min_index<span class="colr5">]</span><span class="colr2">)</span>
+            </span><span>        min_index<span class="colr2">=</span>j<span class="colr2">;</span>
+            </span><span>        <span class="colr5">}</span>
+            </span><span>        swap<span class="colr2">(</span>a<span class="colr2">,</span>i<span class="colr2">,</span>min_index<span class="colr2">)</span><span class="colr2">;</span>
+            </span><span>    <span class="colr5">}</span>
+            </span><span>    <span class="colr3">cout</span> <span class="colr2"><</span><span class="colr2"><</span> <span class="colr6imp">"sorted array : "</span><span class="colr2">;</span>
+            </span><span>    <span class="colr2">for</span><span class="colr2">(</span><span class="colr3">int</span> i <span class="colr2">=</span> 0 <span class="colr2">;</span> i <span class="colr2"><</span> n<span class="colr2">;</span> i<span class="colr2">+</span><span class="colr2">+</span><span class="colr2">)</span><span class="colr5">{</span>
+            </span><span>        <span class='colr2'>printf</span><span class="colr2">(</span><span class="colr6imp">"<span class="colr7">%d</span> "</span> <span class="colr2">,</span> <span class="colr2">*</span><span class="colr2">(</span>a <span class="colr2">+</span> i<span class="colr2">)</span><span class="colr2">)</span><span class="colr2">;</span>
+            </span><span>    <span class="colr5">}</span>
+            </span><span>    <span class="colr3">cout</span> <span class="colr2"><</span><span class="colr2"><</span> <span class="colr6imp">"<span class="colr7">\n</span>"</span><span class="colr2">;</span>
+            </span><span><span class="colr5">}</span>
+            </span><span>
+            </span><span><span class="colr3">void</span> binary_search<span class="colr2">(</span><span class="colr3">int</span> <span class="colr2">*</span>a<span class="colr2">,</span><span class="colr3">int</span> r<span class="colr2">,</span><span class="colr3">int</span> n<span class="colr2">,</span> <span class="colr3">int</span> search<span class="colr2">)</span><span class="colr5">{</span>
+            </span><span>    <span class="colr3">int</span> q<span class="colr2">=</span><span class="colr2">(</span>r<span class="colr2">+</span>n<span class="colr2">)</span>/2<span class="colr2">;</span>
+            </span><span>    <span class="colr2">if</span><span class="colr2">(</span>a<span class="colr5">[</span>q<span class="colr5">]</span> <span class="colr2"><</span> search<span class="colr2">)</span>
+            </span><span>        binary_search<span class="colr2">(</span>a<span class="colr2">,</span>q<span class="colr2">+</span>1<span class="colr2">,</span>n<span class="colr2">,</span>search<span class="colr2">)</span><span class="colr2">;</span>
+            </span><span>    <span class="colr2"><span class="colr2">else</span> <span class="colr2">if</span></span><span class="colr2">(</span>a<span class="colr5">[</span>q<span class="colr5">]</span> <span class="colr2">></span> search<span class="colr2">)</span>
+            </span><span>        binary_search<span class="colr2">(</span>a<span class="colr2">,</span>r<span class="colr2">,</span>q<span class="colr2">,</span>search<span class="colr2">)</span><span class="colr2">;</span>
+            </span><span>    <span class="colr2">if</span><span class="colr2">(</span>a<span class="colr5">[</span>q<span class="colr5">]</span><span class="colr2">=</span><span class="colr2">=</span>search <span class="colr2">)</span>
+            </span><span>        <span class="colr3">cout</span> <span class="colr2"><</span><span class="colr2"><</span> <span class="colr6imp">"the location of " << search << " is at : "</span> <span class="colr2"><</span><span class="colr2"><</span> q<span class="colr2">+</span>1<span class="colr2">;</span>
+            </span><span>    
+            </span><span><span class="colr5">}</span>
+            </span><span>
+            </span><span><span class="colr3">void</span> merge<span class="colr2">(</span><span class="colr3">int</span> <span class="colr2">*</span>a<span class="colr2">,</span><span class="colr3">int</span> l<span class="colr2">,</span><span class="colr3">int</span> m<span class="colr2">,</span><span class="colr3">int</span> n<span class="colr2">,</span> <span class="colr3">int</span> r<span class="colr2">)</span><span class="colr5">{</span>
+            </span><span>    <span class="colr3">int</span> size1<span class="colr2">=</span>m<span class="colr2"><span class="colr2">-</span></span>l<span class="colr2">+</span>1<span class="colr2">,</span>size2<span class="colr2">=</span>n<span class="colr2"><span class="colr2">-</span></span>m<span class="colr2">,</span>size3<span class="colr2">=</span>r<span class="colr2"><span class="colr2">-</span></span>n<span class="colr2">+</span>1<span class="colr2">;</span>
+            </span><span>    <span class="colr3">int</span> left<span class="colr5">[</span>size1<span class="colr5">]</span><span class="colr2">,</span>middle<span class="colr5">[</span>size2<span class="colr5">]</span><span class="colr2">,</span>right<span class="colr5">[</span>size3<span class="colr5">]</span><span class="colr2">;</span>
+            </span><span>    <span class="colr3">int</span> i<span class="colr2">,</span>j<span class="colr2">,</span>k<span class="colr2">,</span>o<span class="colr2">;</span>
+            </span><span>    <span class="colr2">for</span><span class="colr2">(</span>i <span class="colr2">=</span> 0 <span class="colr2">;</span> i <span class="colr2"><</span> size1<span class="colr2">;</span> i<span class="colr2">+</span><span class="colr2">+</span><span class="colr2">)</span><span class="colr5">{</span>
+            </span><span>        left<span class="colr5">[</span>i<span class="colr5">]</span><span class="colr2">=</span>a<span class="colr5">[</span>l<span class="colr2">+</span>i<span class="colr5">]</span><span class="colr2">;</span><span class="colr5">}</span>
+            </span><span>    <span class="colr2">for</span><span class="colr2">(</span>i <span class="colr2">=</span> 0 <span class="colr2">;</span> i <span class="colr2"><</span> size2<span class="colr2">;</span> i<span class="colr2">+</span><span class="colr2">+</span><span class="colr2">)</span><span class="colr5">{</span>
+            </span><span>        middle<span class="colr5">[</span>i<span class="colr5">]</span><span class="colr2">=</span>a<span class="colr5">[</span>m<span class="colr2">+</span>1<span class="colr2">+</span>i<span class="colr5">]</span><span class="colr2">;</span><span class="colr5">}</span>
+            </span><span>    <span class="colr2">for</span><span class="colr2">(</span>i <span class="colr2">=</span> 0 <span class="colr2">;</span> i <span class="colr2"><</span> size3<span class="colr2">;</span> i<span class="colr2">+</span><span class="colr2">+</span><span class="colr2">)</span><span class="colr5">{</span>
+            </span><span>        right<span class="colr5">[</span>i<span class="colr5">]</span><span class="colr2">=</span>a<span class="colr5">[</span>n<span class="colr2">+</span>1<span class="colr2">+</span>i<span class="colr5">]</span><span class="colr2">;</span><span class="colr5">}</span>
+            </span><span>    i<span class="colr2">=</span>j<span class="colr2">=</span>k<span class="colr2">=</span>0<span class="colr2">;</span>
+            </span><span>    o<span class="colr2">=</span>l<span class="colr2">;</span>
+            </span><span>    <span class="colr2">while</span> <span class="colr2">(</span>i  <span class="colr2"><</span>  size1 <span class="colr2">&</span><span class="colr2">&</span> j  <span class="colr2"><</span>  size2 <span class="colr2">&</span><span class="colr2">&</span> k <span class="colr2"><</span> size3<span class="colr2">)</span><span class="colr5">{</span>
+            </span><span>        <span class="colr2">if</span> <span class="colr2">(</span>left<span class="colr5">[</span>i<span class="colr5">]</span><span class="colr2"><</span> <span class="colr2">=</span> middle<span class="colr5">[</span>j<span class="colr5">]</span> <span class="colr2">&</span><span class="colr2">&</span> left<span class="colr5">[</span>i<span class="colr5">]</span><span class="colr2"><</span> <span class="colr2">=</span> right<span class="colr5">[</span>k<span class="colr5">]</span><span class="colr2">)</span><span class="colr5">{</span>
+            </span><span>            a<span class="colr5">[</span>o<span class="colr5">]</span><span class="colr2">=</span>left<span class="colr5">[</span>i<span class="colr5">]</span><span class="colr2">;</span>
+            </span><span>            i<span class="colr2">+</span><span class="colr2">+</span><span class="colr2">;</span>
+            </span><span>        <span class="colr5">}</span>
+            </span><span>        <span class="colr2"><span class="colr2">else</span> <span class="colr2">if</span></span> <span class="colr2">(</span>middle<span class="colr5">[</span>j<span class="colr5">]</span> <span class="colr2"><</span> <span class="colr2">=</span>left<span class="colr5">[</span>i<span class="colr5">]</span> <span class="colr2">&</span><span class="colr2">&</span> middle<span class="colr5">[</span>j<span class="colr5">]</span> <span class="colr2"><</span> <span class="colr2">=</span>right<span class="colr5">[</span>k<span class="colr5">]</span><span class="colr2">)</span><span class="colr5">{</span>
+            </span><span>            a<span class="colr5">[</span>o<span class="colr5">]</span><span class="colr2">=</span>middle<span class="colr5">[</span>j<span class="colr5">]</span><span class="colr2">;</span>
+            </span><span>            j<span class="colr2">+</span><span class="colr2">+</span><span class="colr2">;</span>
+            </span><span>        <span class="colr5">}</span>
+            </span><span>        <span class="colr2"><span class="colr2">else</span> <span class="colr2">if</span></span> <span class="colr2">(</span>right<span class="colr5">[</span>k<span class="colr5">]</span><span class="colr2"><</span> <span class="colr2">=</span> middle<span class="colr5">[</span>j<span class="colr5">]</span> <span class="colr2">&</span><span class="colr2">&</span> right<span class="colr5">[</span>k<span class="colr5">]</span> <span class="colr2"><</span> <span class="colr2">=</span> left<span class="colr5">[</span>i<span class="colr5">]</span><span class="colr2">)</span><span class="colr5">{</span>
+            </span><span>            a<span class="colr5">[</span>o<span class="colr5">]</span><span class="colr2">=</span>right<span class="colr5">[</span>k<span class="colr5">]</span><span class="colr2">;</span>
+            </span><span>            k<span class="colr2">+</span><span class="colr2">+</span><span class="colr2">;</span>
+            </span><span>        <span class="colr5">}</span>
+            </span><span>        o<span class="colr2">+</span><span class="colr2">+</span><span class="colr2">;</span>
+            </span><span>    <span class="colr5">}</span>
+            </span><span>    <span class="colr2">while</span> <span class="colr2">(</span>i  <span class="colr2"><</span>  size1 <span class="colr2">&</span><span class="colr2">&</span> j  <span class="colr2"><</span>  size2<span class="colr2">)</span><span class="colr5">{</span>
+            </span><span>        <span class="colr2">if</span> <span class="colr2">(</span>left<span class="colr5">[</span>i<span class="colr5">]</span><span class="colr2"><</span> <span class="colr2">=</span> middle<span class="colr5">[</span>j<span class="colr5">]</span><span class="colr2">)</span><span class="colr5">{</span>
+            </span><span>            a<span class="colr5">[</span>o<span class="colr5">]</span><span class="colr2">=</span>left<span class="colr5">[</span>i<span class="colr5">]</span><span class="colr2">;</span>
+            </span><span>            i<span class="colr2">+</span><span class="colr2">+</span><span class="colr2">;</span>
+            </span><span>        <span class="colr5">}</span>
+            </span><span>        <span class="colr2">else</span><span class="colr5">{</span>
+            </span><span>            a<span class="colr5">[</span>o<span class="colr5">]</span><span class="colr2">=</span>middle<span class="colr5">[</span>j<span class="colr5">]</span><span class="colr2">;</span>
+            </span><span>            j<span class="colr2">+</span><span class="colr2">+</span><span class="colr2">;</span>
+            </span><span>        <span class="colr5">}</span>
+            </span><span>        o<span class="colr2">+</span><span class="colr2">+</span><span class="colr2">;</span>
+            </span><span>    <span class="colr5">}</span>
+            </span><span>    <span class="colr2">while</span> <span class="colr2">(</span>j  <span class="colr2"><</span>  size1 <span class="colr2">&</span><span class="colr2">&</span> k  <span class="colr2"><</span>  size3<span class="colr2">)</span><span class="colr5">{</span>
+            </span><span>        <span class="colr2">if</span> <span class="colr2">(</span>middle<span class="colr5">[</span>j<span class="colr5">]</span><span class="colr2"><</span> <span class="colr2">=</span> right<span class="colr5">[</span>k<span class="colr5">]</span><span class="colr2">)</span><span class="colr5">{</span>
+            </span><span>            a<span class="colr5">[</span>o<span class="colr5">]</span><span class="colr2">=</span>middle<span class="colr5">[</span>j<span class="colr5">]</span><span class="colr2">;</span>
+            </span><span>            j<span class="colr2">+</span><span class="colr2">+</span><span class="colr2">;</span>
+            </span><span>        <span class="colr5">}</span>
+            </span><span>        <span class="colr2">else</span><span class="colr5">{</span>
+            </span><span>            a<span class="colr5">[</span>o<span class="colr5">]</span><span class="colr2">=</span>right<span class="colr5">[</span>k<span class="colr5">]</span><span class="colr2">;</span>
+            </span><span>            k<span class="colr2">+</span><span class="colr2">+</span><span class="colr2">;</span>
+            </span><span>        <span class="colr5">}</span>
+            </span><span>        o<span class="colr2">+</span><span class="colr2">+</span><span class="colr2">;</span>
+            </span><span>    <span class="colr5">}</span>
+            </span><span>    <span class="colr2">while</span> <span class="colr2">(</span>i  <span class="colr2"><</span>  size1 <span class="colr2">&</span><span class="colr2">&</span> j  <span class="colr2"><</span>  size2<span class="colr2">)</span><span class="colr5">{</span>
+            </span><span>        <span class="colr2">if</span> <span class="colr2">(</span>left<span class="colr5">[</span>i<span class="colr5">]</span><span class="colr2"><</span> <span class="colr2">=</span> right<span class="colr5">[</span>j<span class="colr5">]</span><span class="colr2">)</span><span class="colr5">{</span>
+            </span><span>            a<span class="colr5">[</span>o<span class="colr5">]</span><span class="colr2">=</span>left<span class="colr5">[</span>i<span class="colr5">]</span><span class="colr2">;</span>
+            </span><span>            i<span class="colr2">+</span><span class="colr2">+</span><span class="colr2">;</span>
+            </span><span>        <span class="colr5">}</span>
+            </span><span>        <span class="colr2">else</span><span class="colr5">{</span>
+            </span><span>            a<span class="colr5">[</span>o<span class="colr5">]</span><span class="colr2">=</span>right<span class="colr5">[</span>j<span class="colr5">]</span><span class="colr2">;</span>
+            </span><span>            j<span class="colr2">+</span><span class="colr2">+</span><span class="colr2">;</span>
+            </span><span>        <span class="colr5">}</span>
+            </span><span>        o<span class="colr2">+</span><span class="colr2">+</span><span class="colr2">;</span>
+            </span><span>    <span class="colr5">}</span>
+            </span><span>    <span class="colr2">while</span> <span class="colr2">(</span>i  <span class="colr2"><</span>  size1<span class="colr2">)</span> <span class="colr5">{</span>
+            </span><span>        a<span class="colr5">[</span>o<span class="colr5">]</span> <span class="colr2">=</span> left<span class="colr5">[</span>i<span class="colr5">]</span><span class="colr2">;</span>
+            </span><span>        i<span class="colr2">+</span><span class="colr2">+</span><span class="colr2">;</span>
+            </span><span>        o<span class="colr2">+</span><span class="colr2">+</span><span class="colr2">;</span>
+            </span><span>    <span class="colr5">}</span>
+            </span><span>    <span class="colr2">while</span> <span class="colr2">(</span>j  <span class="colr2"><</span>  size2<span class="colr2">)</span> <span class="colr5">{</span>
+            </span><span>        a<span class="colr5">[</span>o<span class="colr5">]</span> <span class="colr2">=</span> middle<span class="colr5">[</span>j<span class="colr5">]</span><span class="colr2">;</span>
+            </span><span>        j<span class="colr2">+</span><span class="colr2">+</span><span class="colr2">;</span>
+            </span><span>        o<span class="colr2">+</span><span class="colr2">+</span><span class="colr2">;</span>
+            </span><span>    <span class="colr5">}</span>
+            </span><span>    <span class="colr2">while</span> <span class="colr2">(</span>k  <span class="colr2"><</span>  size3<span class="colr2">)</span> <span class="colr5">{</span>
+            </span><span>        a<span class="colr5">[</span>o<span class="colr5">]</span> <span class="colr2">=</span> right<span class="colr5">[</span>k<span class="colr5">]</span><span class="colr2">;</span>
+            </span><span>        k<span class="colr2">+</span><span class="colr2">+</span><span class="colr2">;</span>
+            </span><span>        o<span class="colr2">+</span><span class="colr2">+</span><span class="colr2">;</span>
+            </span><span>    <span class="colr5">}</span>
+            </span><span><span class="colr5">}</span>
+            </span><span>
+            </span><span><span class="colr3">void</span> merge_sort<span class="colr2">(</span><span class="colr3">int</span> <span class="colr2">*</span>a<span class="colr2">,</span><span class="colr3">int</span> l<span class="colr2">,</span><span class="colr3">int</span> r<span class="colr2">)</span><span class="colr5">{</span>
+            </span><span>    <span class="colr3">int</span> m<span class="colr2">=</span> <span class="colr2">(</span>l <span class="colr2">+</span> r<span class="colr2"><span class="colr2">-</span></span>1<span class="colr2">)</span>/3<span class="colr2">;</span>
+            </span><span>    <span class="colr3">int</span> n<span class="colr2">=</span> <span class="colr2">(</span><span class="colr2">(</span>l <span class="colr2">+</span> r<span class="colr2"><span class="colr2">-</span></span>1<span class="colr2">)</span>/3<span class="colr2">)</span><span class="colr2">+</span>m<span class="colr2">;</span>
+            </span><span>    <span class="colr2">if</span><span class="colr2">(</span>l <span class="colr2"><</span> m  <span class="colr2">&</span><span class="colr2">&</span> m <span class="colr2"><</span> n <span class="colr2">&</span><span class="colr2">&</span> n <span class="colr2"><</span> r<span class="colr2">)</span><span class="colr5">{</span>
+            </span><span>        merge_sort<span class="colr2">(</span>a<span class="colr2">,</span> l<span class="colr2">,</span> m<span class="colr2">)</span><span class="colr2">;</span>
+            </span><span>        merge_sort<span class="colr2">(</span>a<span class="colr2">,</span> m<span class="colr2">+</span>1<span class="colr2">,</span> n<span class="colr2">)</span><span class="colr2">;</span>
+            </span><span>        merge_sort<span class="colr2">(</span>a<span class="colr2">,</span> n<span class="colr2">+</span>1<span class="colr2">,</span> r<span class="colr2">)</span><span class="colr2">;</span>
+            </span><span>        merge<span class="colr2">(</span>a<span class="colr2">,</span> l<span class="colr2">,</span> m<span class="colr2">,</span> n<span class="colr2">,</span> r<span class="colr2">)</span><span class="colr2">;</span>
+            </span><span>    <span class="colr5">}</span>
+            </span><span><span class="colr5">}</span>
+            </span><span>
+            </span><span class="colr4">// void quick_sort(int *a, int n){
+            </span><span class="colr4">// }
+            </span><span><span class="colr3">void</span> leniar_search<span class="colr2">(</span><span class="colr3">int</span> <span class="colr2">*</span>a<span class="colr2">,</span><span class="colr3">int</span> r<span class="colr2">,</span><span class="colr3">int</span> n<span class="colr2">,</span> <span class="colr3">int</span> search<span class="colr2">)</span><span class="colr5">{</span>
+            </span><span>    <span class="colr2">for</span> <span class="colr2">(</span><span class="colr3">int</span> i <span class="colr2">=</span> 0<span class="colr2">;</span> i  <span class="colr2"><</span>  n<span class="colr2">;</span> i<span class="colr2">+</span><span class="colr2">+</span><span class="colr2">)</span>
+            </span><span>    <span class="colr5">{</span>
+            </span><span>        <span class="colr2">if</span><span class="colr2">(</span>a<span class="colr5">[</span>i<span class="colr5">]</span><span class="colr2">=</span><span class="colr2">=</span>search<span class="colr2">)</span><span class="colr5">{</span>
+            </span><span>        <span class="colr3">cout</span> <span class="colr2"><</span><span class="colr2"><</span> <span class="colr6imp">"the location of " << search << " is at : "</span> <span class="colr2"><</span><span class="colr2"><</span> i<span class="colr2">+</span>1 <span class="colr2"><</span><span class="colr2"><</span> endl<span class="colr2">;</span>
+            </span><span>        <span class="colr5">}</span>
+            </span><span>    <span class="colr5">}</span>
+            </span><span>    
+            </span><span><span class="colr5">}</span>
+            </span><span>
+            </span><span><span class="colr3">void</span> quick_sort<span class="colr2">(</span><span class="colr3">int</span><span class="colr2">*</span> a<span class="colr2">,</span> <span class="colr3">int</span> l<span class="colr2">,</span> <span class="colr3">int</span> r<span class="colr2">)</span><span class="colr5">{</span>
+            </span><span>    <span class="colr3">int</span> key<span class="colr2">=</span>a<span class="colr5">[</span>r<span class="colr5">]</span><span class="colr2">;</span>
+            </span><span>    <span class="colr3">cout</span> <span class="colr2"><</span><span class="colr2"><</span> key <span class="colr2"><</span><span class="colr2"><</span> endl<span class="colr2">;</span>
+            </span><span>    <span class="colr3">int</span> n<span class="colr2">,</span>m<span class="colr2">;</span>
+            </span><span>    m<span class="colr2">=</span>0<span class="colr2">;</span>n<span class="colr2">=</span>0<span class="colr2">;</span>
+            </span><span>    <span class="colr2">while</span> <span class="colr2">(</span>m <span class="colr2"><</span> r<span class="colr2"><span class="colr2">-</span></span>2<span class="colr2">)</span>
+            </span><span>    <span class="colr5">{</span>
+            </span><span>        <span class="colr2">if</span> <span class="colr2">(</span>a<span class="colr5">[</span>n<span class="colr5">]</span> <span class="colr2"><</span> <span class="colr2">=</span>key<span class="colr2">)</span><span class="colr5">{</span>
+            </span><span>            n<span class="colr2">+</span><span class="colr2">+</span><span class="colr2">;</span>
+            </span><span>            m<span class="colr2">+</span><span class="colr2">+</span><span class="colr2">;</span>
+            </span><span>        <span class="colr5">}</span>
+            </span><span>        <span class="colr2">else</span><span class="colr5">{</span>
+            </span><span>            m<span class="colr2">+</span><span class="colr2">+</span><span class="colr2">;</span>
+            </span><span>            swap<span class="colr2">(</span>a<span class="colr2">,</span>n<span class="colr2">,</span>m<span class="colr2">)</span><span class="colr2">;</span>
+            </span><span>            <span class="colr3">cout</span> <span class="colr2"><</span><span class="colr2"><</span> n <span class="colr2"><</span><span class="colr2"><</span> <span class="colr6imp">"-->"</span> <span class="colr2"><</span><span class="colr2"><</span> m <span class="colr2"><</span><span class="colr2"><</span> endl<span class="colr2">;</span>
+            </span><span>            n<span class="colr2">+</span><span class="colr2">+</span><span class="colr2">;</span>
+            </span><span>        <span class="colr5">}</span>
+            </span><span>    <span class="colr5">}</span>
+            </span><span>    swap<span class="colr2">(</span>a<span class="colr2">,</span>n<span class="colr2">,</span>r<span class="colr2"><span class="colr2">-</span></span>1<span class="colr2">)</span><span class="colr2">;</span>
+            </span><span class="colr4">    // quick_sort(a,l,m-1);
+            </span><span class="colr4">    // quick_sort(a,m+1,r);
+            </span><span><span class="colr5">}</span>
+            </span><span>
+            </span><span><span class="colr3">int</span> main<span class="colr2">(</span><span class="colr3">int</span> argc<span class="colr2">,</span> <span class="colr3">char</span> const <span class="colr2">*</span>argv<span class="colr5">[</span><span class="colr5">]</span><span class="colr2">)</span>
+            </span><span><span class="colr5">{</span>
+            </span><span>    <span class="colr3">int</span> arr<span class="colr5">[</span><span class="colr5">]</span><span class="colr2">=</span><span class="colr5">{</span>1<span class="colr2">,</span>3<span class="colr2">,</span>21<span class="colr2">,</span>6<span class="colr2">,</span>7<span class="colr2">,</span>7<span class="colr2">,</span>5<span class="colr2">,</span>4<span class="colr2">,</span>8<span class="colr2">,</span>9<span class="colr2">,</span>10<span class="colr2">,</span>55<span class="colr2">,</span>7<span class="colr5">}</span><span class="colr2">;</span>
+            </span><span>    <span class="colr3">int</span> n<span class="colr2">=</span>sizeof<span class="colr2">(</span>arr<span class="colr2">)</span>/sizeof<span class="colr2">(</span><span class="colr3">int</span><span class="colr2">)</span><span class="colr2">;</span>
+            </span><span>    <span class="colr3">cout</span> <span class="colr2"><</span><span class="colr2"><</span> <span class="colr6imp">"input array : "</span><span class="colr2">;</span>
+            </span><span>    <span class="colr2">for</span><span class="colr2">(</span><span class="colr3">int</span> i <span class="colr2">=</span> 0 <span class="colr2">;</span> i <span class="colr2"><</span> n<span class="colr2">;</span> i<span class="colr2">+</span><span class="colr2">+</span><span class="colr2">)</span><span class="colr5">{</span>
+            </span><span>        <span class='colr2'>printf</span><span class="colr2">(</span><span class="colr6imp">"<span class="colr7">%d</span> "</span> <span class="colr2">,</span> <span class="colr2">*</span><span class="colr2">(</span>arr <span class="colr2">+</span> i<span class="colr2">)</span><span class="colr2">)</span><span class="colr2">;</span>
+            </span><span>    <span class="colr5">}</span>
+            </span><span>    <span class="colr3">cout</span> <span class="colr2"><</span><span class="colr2"><</span> <span class="colr6imp">"<span class="colr7">\n</span>"</span><span class="colr2">;</span>
+            </span><span>    <span class="colr3">cout</span> <span class="colr2"><</span><span class="colr2"><</span> n<span class="colr2">;</span>
+            </span><span>    <span class="colr3">cout</span> <span class="colr2"><</span><span class="colr2"><</span> <span class="colr6imp">"<span class="colr7">\n</span>"</span><span class="colr2">;</span>
+            </span><span class="colr4">    // bubble_sort(arr,n);
+            </span><span class="colr4">    // instertion_sort(arr,n);
+            </span><span class="colr4">    // selection_sort(arr,n);
+            </span><span>    merge_sort<span class="colr2">(</span>arr<span class="colr2">,</span>0<span class="colr2">,</span>n<span class="colr2"><span class="colr2">-</span></span>1<span class="colr2">)</span><span class="colr2">;</span>
+            </span><span class="colr4">    // quick_sort(arr,0,n);
+            </span><span>    <span class="colr3">cout</span> <span class="colr2"><</span><span class="colr2"><</span> <span class="colr6imp">"sorted array : "</span><span class="colr2">;</span>
+            </span><span>    <span class="colr2">for</span><span class="colr2">(</span><span class="colr3">int</span> i <span class="colr2">=</span> 0 <span class="colr2">;</span> i <span class="colr2"><</span> n<span class="colr2">;</span> i<span class="colr2">+</span><span class="colr2">+</span><span class="colr2">)</span><span class="colr5">{</span>
+            </span><span>        <span class='colr2'>printf</span><span class="colr2">(</span><span class="colr6imp">"<span class="colr7">%d</span> "</span> <span class="colr2">,</span> <span class="colr2">*</span><span class="colr2">(</span>arr <span class="colr2">+</span> i<span class="colr2">)</span><span class="colr2">)</span><span class="colr2">;</span>
+            </span><span>    <span class="colr5">}</span>
+            </span><span class="colr4">    // cout<<"\n\n";
+            </span><span class="colr4">    // binary_search(arr,0,n,7);
+            </span><span class="colr4">    // cout<<"\n\n\n";
+            </span><span class="colr4">    // leniar_search(arr,0,n,7);
+            </span><span>    <span class="colr2">return</span> 0<span class="colr2">;</span>
+            </span><span><span class="colr5">}</span>
+            </span>  
+            </pre>
+        </div>
+    </div>
+    <br><br>
+
+</body>
+
+</html>
